@@ -1,9 +1,6 @@
 configstore/
-filezilla/
-gatsby/
 gh/
 karabiner/
-neofetch/
 sanity/
 zsh/.zsh_history
 nvim/plugged/*
