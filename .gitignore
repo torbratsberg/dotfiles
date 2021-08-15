@@ -1,0 +1,9 @@
+configstore/
+filezilla/
+gatsby/
+gh/
+karabiner/
+neofetch/
+sanity/
+zsh/.zsh_history
+.DS_Store
