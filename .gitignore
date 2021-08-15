@@ -6,4 +6,7 @@ karabiner/
 neofetch/
 sanity/
 zsh/.zsh_history
+nvim/plugged/*
+nvim/.netrwhist
+nvim/notes/*
 .DS_Store
