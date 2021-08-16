@@ -1,4 +1,7 @@
 # torbratsberg ZSH Theme
+# This is just dstufft but with the time in first line
+
+ZSH_THEME="../../.config/zsh/torbratsberg"
 
 function prompt_char {
     git branch >/dev/null 2>/dev/null && echo '±' && return
