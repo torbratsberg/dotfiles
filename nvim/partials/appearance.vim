@@ -14,7 +14,7 @@ if g:theme == 'horizon'
     hi! Cursor guifg=#000000 guibg=#e95678
     hi! htmlTagName gui=italic guifg=#21bfc2
     hi! Statement cterm=italic gui=italic ctermfg=171 guifg=#b877db
-    hi! Visual gui=italic guibg=#2b2e3b guifg=#09f7a0
+    hi! Visual gui=bold guibg=#2b2e3b guifg=#09f7a0
     hi! link TabLineFill Character
     hi! link TabLine Folded
     hi! link TabLineSel Directory
