@@ -1,5 +1,5 @@
 # Path oh-my-zsh installation.
-export ZSH="/Users/torbratsberg/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export UPDATE_ZSH_DAYS=7
 ZSH_THEME="../../.config/zsh/torbratsberg"
 plugins=()
@@ -12,26 +12,26 @@ export EDITOR='nvim'
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-alias m="cd ~/main"
-alias s="cd ~/sites"
+alias m="cd $HOME/main"
+alias s="cd $HOME/sites"
 alias t="cd wp-content/themes/"
-alias c="cd ~/code"
-alias co="cd ~/.config"
+alias c="cd $HOME/code"
+alias co="cd $HOME/.config"
 
 alias gs="git status"
 
-alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy"
+alias sshkey="cat $HOME/.ssh/id_rsa.pub | pbcopy"
 alias vhosts="nvim /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf"
 alias hosts="nvim /private/etc/hosts"
-alias dev="bash ~/code/bash/dc-devkit/start.sh"
+alias dev="bash $HOME/code/bash/dc-devkit/start.sh"
 alias ip="ipconfig getifaddr en0"
 
-alias brofile="nvim ~/.config/zsh/zshrc"
-alias brodate="source ~/.config/zsh/zshrc"
+alias brofile="nvim $HOME/.config/zsh/zshrc"
+alias brodate="source $HOME/.config/zsh/zshrc"
 alias l="ls -lap"
 
-alias tu="tmux -f ~/.config/tmux/tmux.conf"
-alias tua="tmux -f ~/.config/tmux/tmux.conf a"
+alias tu="tmux -f $HOME/.config/tmux/tmux.conf"
+alias tua="tmux -f $HOME/.config/tmux/tmux.conf a"
 
 alias ungitplugins="find ./wp-content/plugins/ -type d -name ".git" -exec rm -rf "{}" \;"
 
@@ -40,5 +40,5 @@ HISTFILE=~/.config/zsh/.zsh_history
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export PATH="/Users/torbratsberg/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
