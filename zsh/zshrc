@@ -1,7 +1,7 @@
 # Path oh-my-zsh installation.
 export ZSH="/Users/torbratsberg/.oh-my-zsh"
 export UPDATE_ZSH_DAYS=7
-ZSH_THEME="dstufft"
+ZSH_THEME="../../.config/zsh/torbratsberg"
 plugins=()
 source $ZSH/oh-my-zsh.sh
 
