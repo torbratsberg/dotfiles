@@ -8,12 +8,12 @@ augroup CrMapFix
 augroup END
 
 command! FormatFile call FormatFileFunc()
-
 function! FormatFileFunc()
     execute '%s/([ ]/(/g'
     execute '%s/[ ])/)/g'
     execute '%s/[[][ ]/[/g'
     execute '%s/[ ][]]/]/g'
+    execute 'norm gg=G'
 endfunction
 
 function! SelectIndent ()
@@ -46,6 +46,12 @@ function! SelectIndentWithSpace ()
         exe "normal j"
     endwhile
 endfun
+
+command! ReactComponent call ReactComponentTemplate()
+function! ReactComponentTemplate()
+    read ~/.config/nvim/templates/react-component.txt
+    execute '%s/<++>/' . expand('%:t:r') . '/ge'
+endfunction
 
 nmap <Leader>. :call <SID>SynStack()<CR>
 function! <SID>SynStack()
