@@ -16,6 +16,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'mattn/emmet-vim'
 Plug 'folke/trouble.nvim'
+Plug 'sbdchd/neoformat'
 
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'

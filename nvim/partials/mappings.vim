@@ -66,6 +66,8 @@ nmap Y yg_
 " Keep cursor in middle when searching
 nmap n nzzzv
 nmap N Nzzzv
+nmap <leader>nf :Neoformat<cr>
+vmap <leader>nf :'<,'>Neoformat<cr>
 
 " Character completion
 imap (<Tab> ()<Left>
