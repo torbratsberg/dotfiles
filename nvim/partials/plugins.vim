@@ -17,10 +17,10 @@ Plug 'nvim-treesitter/playground'
 Plug 'mattn/emmet-vim'
 Plug 'folke/trouble.nvim'
 Plug 'sbdchd/neoformat'
+Plug 'editorconfig/editorconfig-vim'
 
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'mxw/vim-jsx'
 Plug 'posva/vim-vue'
 Plug 'ntk148v/vim-horizon'
 Plug 'junegunn/seoul256.vim'
