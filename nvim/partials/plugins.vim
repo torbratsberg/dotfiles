@@ -9,15 +9,15 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
-Plug 'diepm/vim-rest-console'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'mattn/emmet-vim'
-Plug 'folke/trouble.nvim'
 Plug 'sbdchd/neoformat'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-eunuch'
+Plug 'godlygeek/tabular'
 
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'
