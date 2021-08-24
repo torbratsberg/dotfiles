@@ -1,6 +1,6 @@
 set colorcolumn=80
 set completeopt=menuone,noinsert
-set expandtab
+set noexpandtab
 set hidden
 set history=400
 set laststatus=2
