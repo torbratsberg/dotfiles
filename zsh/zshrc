@@ -15,6 +15,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 alias m="cd $HOME/main"
 alias s="cd $HOME/sites"
 alias t="cd wp-content/themes/"
+alias p="cd wp-content/plugins/"
 alias c="cd $HOME/code"
 alias co="cd $HOME/.config"
 
