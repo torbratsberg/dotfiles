@@ -9,49 +9,43 @@ augroup END
 
 command! FormatFile call FormatFileFunc()
 function! FormatFileFunc()
-    execute '%s/([ ]/(/g'
-    execute '%s/[ ])/)/g'
-    execute '%s/[[][ ]/[/g'
-    execute '%s/[ ][]]/]/g'
-    execute 'norm gg=G'
+    exec '%s/([ ]/(/g'
+    exec '%s/[ ])/)/g'
+    exec '%s/[[][ ]/[/g'
+    exec '%s/[ ][]]/]/g'
+    exec 'norm gg=G'
 endfunction
 
 function! SelectIndent ()
     if indent(line(".")) == 0
-        exe "normal vap"
+        exec "normal vap"
         return
     endif
     let temp_var=indent(line("."))
     while indent(line(".")-1) >= temp_var
-        exe "normal k"
+        exec "normal k"
     endwhile
     exe "normal V"
     while indent(line(".")+1) >= temp_var
-        exe "normal j"
+        exec "normal j"
     endwhile
 endfun
 
 " Selects indentation level including empty lines
 function! SelectIndentWithSpace ()
     if indent(line(".")) == 0
-        exe "normal vap"
+        exec "normal vap"
         return
     endif
     let temp_var=indent(line("."))
     while indent(line(".")-1) >= temp_var || (indent(line(".")-1) == 0 && strwidth(getline(line(".")-1)) == 0)
-        exe "normal k"
+        exec "normal k"
     endwhile
     exe "normal V"
     while indent(line(".")+1) >= temp_var || (indent(line(".")+1) == 0 && strwidth(getline(line(".")+1)) == 0)
-        exe "normal j"
+        exec "normal j"
     endwhile
 endfun
-
-command! ReactComponent call ReactComponentTemplate()
-function! ReactComponentTemplate()
-    read ~/.config/nvim/templates/react-component.txt
-    execute '%s/<++>/' . expand('%:t:r') . '/ge'
-endfunction
 
 nmap <Leader>. :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -60,3 +54,16 @@ function! <SID>SynStack()
     endif
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" JS Stuff
+command! ReactComponent call ReactComponentTemplate()
+function! ReactComponentTemplate()
+    read ~/.config/nvim/templates/react-component.txt
+    exec '%s/<++>/' . expand('%:t:r') . '/ge'
+endfunction
+
+command! RunJS call RunJSFunc()
+function RunJSFunc()
+	exec 'vs'
+	exec 'terminal node ' . expand('%:p')
+endfunction
