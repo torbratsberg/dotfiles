@@ -21,6 +21,8 @@ alias co="cd $HOME/.config"
 
 alias gs="git status"
 
+alias nuke="rm -rf"
+
 alias sshkey="cat $HOME/.ssh/id_rsa.pub | pbcopy"
 alias vhosts="nvim /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf"
 alias hosts="nvim /private/etc/hosts"

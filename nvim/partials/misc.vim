@@ -56,8 +56,8 @@ function! <SID>SynStack()
 endfunc
 
 " JS Stuff
-command! ReactComponent call ReactComponentTemplate()
-function! ReactComponentTemplate()
+command! NewReactComponent call NewReactComponentFunc()
+function! NewReactComponentFunc()
     read ~/.config/nvim/templates/react-component.txt
     exec '%s/<++>/' . expand('%:t:r') . '/ge'
 endfunction
