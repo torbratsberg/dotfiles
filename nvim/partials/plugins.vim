@@ -14,10 +14,9 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'mattn/emmet-vim'
-Plug 'sbdchd/neoformat'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'godlygeek/tabular'
+Plug 'justinmk/vim-sneak'
 
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'

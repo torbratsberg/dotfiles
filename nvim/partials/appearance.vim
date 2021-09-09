@@ -18,6 +18,10 @@ if g:theme == 'horizon'
     hi! link TabLineFill Character
     hi! link TabLine Folded
     hi! link TabLineSel Directory
+	" Make vim background transparent
+	hi! Normal guibg=NONE
+	hi! EndOfBuffer guibg=NONE
+	hi! LineNr guibg=NONE
 elseif g:theme == 'seoul256'
     let g:seoul256_background = 234
     colorscheme seoul256

@@ -40,7 +40,7 @@ nmap <leader>ct :lua require('telescope.builtin').lsp_workspace_diagnostics(requ
 nmap <leader>nv :lua require('luafiles.telescope').search_config()<cr>
 nmap <leader>nn :lua require('luafiles.telescope').search_notes()<cr>
 
-" In file finding
+" In file movement
 map <leader>a <Plug>(easymotion-bd-f)
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
@@ -68,8 +68,7 @@ nmap Y yg_
 " Keep cursor in middle when searching
 nmap n nzzzv
 nmap N Nzzzv
-nmap <leader>nf :Neoformat<cr>
-vmap <leader>nf :'<,'>Neoformat<cr>
+nmap <C-f> :Lex<cr>
 
 " Character completion
 imap (<Tab> ()<Left>
