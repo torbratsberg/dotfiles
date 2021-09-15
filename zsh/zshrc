@@ -34,9 +34,10 @@ alias brodate="source $HOME/.config/zsh/zshrc"
 alias l="ls -lap"
 
 alias tu="tmux -f $HOME/.config/tmux/tmux.conf"
-alias tua="tmux -f $HOME/.config/tmux/tmux.conf a"
 
 alias ungitplugins="find ./wp-content/plugins/ -type d -name ".git" -exec rm -rf "{}" \;"
+
+alias cheat="bash $HOME/.config/scripts/cheat.sh"
 
 HISTFILE=~/.config/zsh/.zsh_history
 

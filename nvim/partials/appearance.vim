@@ -22,6 +22,7 @@ if g:theme == 'horizon'
 	hi! Normal guibg=NONE
 	hi! EndOfBuffer guibg=NONE
 	hi! LineNr guibg=NONE
+	hi! SignColumn guibg=NONE
 elseif g:theme == 'seoul256'
     let g:seoul256_background = 234
     colorscheme seoul256

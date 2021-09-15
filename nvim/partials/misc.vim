@@ -2,7 +2,13 @@ filetype plugin indent on
 autocmd FileType scss setl iskeyword+=@-@
 
 " Since <cr> is mapped to SelectIndent(), selecting from qf list did not work
-augroup CrMapFix
+augroup CrMapFixNetrw
+    autocmd!
+    autocmd FileType netrw nmap <buffer> l <Plug>NetrwLocalBrowseCheck
+augroup END
+
+" Since <cr> is mapped to SelectIndent(), selecting from qf list did not work
+augroup CrMapFixQf
     autocmd!
     autocmd FileType qf nmap <buffer> <cr> <cr>
 augroup END

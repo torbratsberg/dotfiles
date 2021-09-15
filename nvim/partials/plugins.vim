@@ -16,7 +16,6 @@ Plug 'nvim-treesitter/playground'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'godlygeek/tabular'
-Plug 'justinmk/vim-sneak'
 
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'
