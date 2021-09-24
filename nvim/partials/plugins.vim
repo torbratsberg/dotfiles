@@ -16,6 +16,7 @@ Plug 'nvim-treesitter/playground'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'godlygeek/tabular'
+Plug 'iamcco/markdown-preview.nvim'
 
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'

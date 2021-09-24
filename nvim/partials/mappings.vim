@@ -22,6 +22,8 @@ nmap <leader>gs :G<cr>
 nmap <leader>gbl :Git blame<cr>
 nmap <leader>gbr :Telescope git_branches<cr>
 nmap <leader>gd :Gdiffsplit<cr>
+nmap <leader>gll :Git log<cr>
+nmap <leader>gln :Git log --name-status<cr>
 nmap <leader>g<left> :diffget //2<cr>
 nmap <leader>g<Right> :diffget //3<cr>
 
