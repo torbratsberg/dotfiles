@@ -41,6 +41,8 @@ nmap <leader>ct :lua require('telescope.builtin').lsp_workspace_diagnostics(requ
 " Customs
 nmap <leader>nv :lua require('luafiles.telescope').search_config()<cr>
 nmap <leader>nn :lua require('luafiles.telescope').search_notes()<cr>
+nmap <Leader>nf :lua require('dirfind').search_dirs()<cr>
+nmap <Leader>nd :lua require('dirfind').select_dirs()<cr>
 
 " In file movement
 map <leader>a <Plug>(easymotion-bd-f)

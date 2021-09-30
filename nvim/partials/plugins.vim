@@ -23,5 +23,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'posva/vim-vue'
 Plug 'ntk148v/vim-horizon'
 Plug 'junegunn/seoul256.vim'
+Plug 'torbratsberg/telescope-dir-find'
 
 call plug#end()
