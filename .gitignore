@@ -6,4 +6,5 @@ zsh/.zsh_history
 nvim/plugged/*
 nvim/.netrwhist
 nvim/notes/*
+zsh/private-zshrc.sh
 .DS_Store

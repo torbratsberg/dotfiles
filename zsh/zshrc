@@ -5,6 +5,8 @@ ZSH_THEME="../../.config/zsh/torbratsberg"
 plugins=()
 source $ZSH/oh-my-zsh.sh
 
+source private-zshrc.sh
+
 export PATH="$HOME/.bin:$PATH"
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
