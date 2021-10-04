@@ -17,12 +17,12 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'godlygeek/tabular'
 Plug 'iamcco/markdown-preview.nvim'
+Plug 'torbratsberg/telescope-dir-find'
 
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'posva/vim-vue'
 Plug 'ntk148v/vim-horizon'
-Plug 'junegunn/seoul256.vim'
-Plug 'torbratsberg/telescope-dir-find'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()

@@ -1,4 +1,4 @@
-let g:theme = 'horizon'
+let g:theme = 'tokyo'
 
 syntax on
 set background=dark
@@ -24,11 +24,7 @@ if g:theme == 'horizon'
 	hi! LineNr guibg=NONE
 	hi! SignColumn guibg=NONE
 	hi! VertSplit guibg=NONE
-elseif g:theme == 'seoul256'
-    let g:seoul256_background = 234
-    colorscheme seoul256
-    hi! link SassClass Special
-    hi! link PythonSelf WhiteSpace
-    syn keyword PythonSelf self
-    hi! LineNr guibg=#h5h5h5 guifg=#555555
+elseif g:theme == 'tokyo'
+	let g:tokyonight_style="night"
+	colorscheme tokyonight
 endif
