@@ -18,6 +18,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'godlygeek/tabular'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'torbratsberg/telescope-dir-find'
+Plug 'akinsho/bufferline.nvim'
 
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'

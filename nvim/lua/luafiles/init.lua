@@ -33,3 +33,11 @@ require('telescope').setup{
         }
     }
 }
+
+-- Bufferline setup
+require("bufferline").setup{
+	options = {
+		diagnostics = 'nvim_lsp'
+	}
+}
+

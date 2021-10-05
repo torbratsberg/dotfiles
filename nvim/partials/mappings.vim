@@ -6,6 +6,13 @@ nmap <leader>cn :lua vim.lsp.buf.rename()<cr>
 nmap <leader>cf :lua vim.lsp.buf.formatting()<cr>
 nmap <leader>cj :lua vim.lsp.buf.hover()<cr>
 
+" Bufferline mappings
+nnoremap <right> :BufferLineCycleNext<cr>
+nnoremap <left> :BufferLineCyclePrev<cr>
+nnoremap <up> :BufferLineMoveNext<cr>
+nnoremap <down> :BufferLineMovePrev<cr>
+nnoremap <leader>bs :BufferLinePick<cr>
+
 " Add characters
 nmap <leader>qd ciw""<esc>P
 nmap <leader>qs ciw''<esc>P
@@ -15,6 +22,7 @@ nmap <leader>qb ciw``<esc>P
 nmap <leader>w :w<cr>
 nmap <leader>s :%s///<Left><Left>
 vmap <leader>y "+y
+nmap <leader><leader>q :bd<cr>
 tmap <leader><esc> <C-\><C-n>
 
 " Git commands
@@ -29,7 +37,7 @@ nmap <leader>g<Right> :diffget //3<cr>
 
 " Looking up stuff commands
 nmap <Leader>f :lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({}))<cr>
-nmap <leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({}))<cr>
+nmap <leader>bb :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({}))<cr>
 nmap <leader>e :lua require('telescope.builtin').file_browser(require('telescope.themes').get_dropdown({}))<cr>
 nmap <leader>rl :lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<cr>
 nmap <leader>rs :lua require('telescope.builtin').grep_string(require('telescope.themes').get_dropdown({}))<cr>
