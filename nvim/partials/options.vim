@@ -13,10 +13,10 @@ set number
 set path=**
 set relativenumber
 set scrolloff=8
-set shiftwidth=4
 set sidescrolloff=20
 set smartindent
 set splitbelow
 set splitright
 set tabstop=4
+set shiftwidth=4
 set updatetime=100

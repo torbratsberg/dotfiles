@@ -6,13 +6,6 @@ nmap <leader>cn :lua vim.lsp.buf.rename()<cr>
 nmap <leader>cf :lua vim.lsp.buf.formatting()<cr>
 nmap <leader>cj :lua vim.lsp.buf.hover()<cr>
 
-" Bufferline mappings
-nnoremap <right> :BufferLineCycleNext<cr>
-nnoremap <left> :BufferLineCyclePrev<cr>
-nnoremap <up> :BufferLineMoveNext<cr>
-nnoremap <down> :BufferLineMovePrev<cr>
-nnoremap <leader>bs :BufferLinePick<cr>
-
 " Add characters
 nmap <leader>qd ciw""<esc>P
 nmap <leader>qs ciw''<esc>P
