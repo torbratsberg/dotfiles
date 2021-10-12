@@ -1,5 +1,5 @@
 set colorcolumn=80
-set completeopt=menuone,noinsert
+set completeopt=menu,noinsert,noselect
 set noexpandtab
 set hidden
 set history=400
@@ -20,3 +20,6 @@ set splitright
 set tabstop=4
 set shiftwidth=4
 set updatetime=100
+set signcolumn=yes
+set shortmess+=filnxtToOF
+set omnifunc=v:lua.vim.lsp.omnifunc

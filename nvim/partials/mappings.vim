@@ -25,12 +25,14 @@ nmap <leader>gbr :Telescope git_branches<cr>
 nmap <leader>gd :Gdiffsplit<cr>
 nmap <leader>gll :Git log<cr>
 nmap <leader>gln :Git log --name-status<cr>
+nmap <leader>gg :Git pull<cr>
+nmap <leader>gp :Git push<cr>
 nmap <leader>g<left> :diffget //2<cr>
 nmap <leader>g<Right> :diffget //3<cr>
 
 " Looking up stuff commands
 nmap <Leader>f :lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({}))<cr>
-nmap <leader>bb :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({}))<cr>
+nmap <leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({}))<cr>
 nmap <leader>e :lua require('telescope.builtin').file_browser(require('telescope.themes').get_dropdown({}))<cr>
 nmap <leader>rl :lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<cr>
 nmap <leader>rs :lua require('telescope.builtin').grep_string(require('telescope.themes').get_dropdown({}))<cr>
@@ -60,20 +62,16 @@ vmap < < gv
 vmap > > gv
 nmap <tab><tab> <C-^>
 nmap <leader>cs :so ~/.config/nvim/init.vim<cr>
-" Makes nice comment block
-nmap gcb 0i=== <esc>A ===<esc>yypyypVr=kkVr=Vjjgc
 " Selects indentation level (See partials/misc.vim for function code)
 nmap <leader><cr> :call SelectIndentWithSpace()<cr>
 nmap <cr> :call SelectIndent()<cr>
 " Basically search and replace with .
-nmap cn *``cgn
 nmap cn *``cgn
 " Vim like Y behaviour
 nmap Y yg_
 " Keep cursor in middle when searching
 nmap n nzzzv
 nmap N Nzzzv
-nmap <C-f> :Lex<cr>
 
 " Character completion
 imap (<Tab> ()<Left>
