@@ -21,5 +21,3 @@ set tabstop=4
 set shiftwidth=4
 set updatetime=100
 set signcolumn=yes
-set shortmess+=filnxtToOF
-set omnifunc=v:lua.vim.lsp.omnifunc
