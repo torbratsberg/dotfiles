@@ -24,6 +24,7 @@ if g:theme == 'horizon'
 	hi! LineNr guibg=NONE
 	hi! SignColumn guibg=NONE
 	hi! VertSplit guibg=NONE
+	hi! VertSplit guibg=NONE
 elseif g:theme == 'tokyo'
 	let g:tokyonight_style="night"
 	colorscheme tokyonight

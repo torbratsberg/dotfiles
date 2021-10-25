@@ -1,9 +1,14 @@
 filetype plugin indent on
 autocmd FileType scss setl iskeyword+=@-@
 
-augroup NetRWL
+augroup go_save
+	autocmd!
+	autocmd BufWritePre *.go silent! lua vim.lsp.buf.formatting()
+augroup END
+
+augroup highlight_yank
     autocmd!
-    autocmd FileType netrw nmap <buffer> l <Plug>NetrwLocalBrowseCheck
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 100})
 augroup END
 
 " Since <cr> is mapped to SelectIndent(), selecting from qf list did not work
@@ -11,15 +16,6 @@ augroup CrMapFixQf
     autocmd!
     autocmd FileType qf nmap <buffer> <cr> <cr>
 augroup END
-
-command! FormatFile call FormatFileFunc()
-function! FormatFileFunc()
-    exec '%s/([ ]/(/g'
-    exec '%s/[ ])/)/g'
-    exec '%s/[[][ ]/[/g'
-    exec '%s/[ ][]]/]/g'
-    exec 'norm gg=G'
-endfunction
 
 function! SelectIndent ()
     if indent(line(".")) == 0

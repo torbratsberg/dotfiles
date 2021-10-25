@@ -23,3 +23,24 @@ require('telescope').setup{
 }
 
 require('luafiles.lsp')
+
+require'nvim-tree'.setup {
+	disable_netrw       = true,
+	hijack_netrw        = true,
+	auto_close          = true,
+	diagnostics = {
+		enable = true,
+		icons = {
+			hint = "",
+			info = "",
+			warning = "",
+			error = "",
+		}
+	},
+	view = {
+		width = 30,
+		height = 30,
+		side = 'right',
+		auto_resize = true,
+	}
+}

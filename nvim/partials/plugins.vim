@@ -24,6 +24,7 @@ Plug 'godlygeek/tabular'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'torbratsberg/telescope-dir-find'
 Plug 'SirVer/ultisnips'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'
