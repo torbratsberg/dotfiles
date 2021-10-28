@@ -1,6 +1,8 @@
 configstore/
 gh/
 karabiner/
+iterm2/
+scripthub/
 sanity/
 zsh/.zsh_history
 nvim/plugged/*

@@ -17,11 +17,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-eunuch'
-Plug 'godlygeek/tabular'
-Plug 'iamcco/markdown-preview.nvim'
 Plug 'torbratsberg/telescope-dir-find'
 Plug 'SirVer/ultisnips'
 Plug 'kyazdani42/nvim-tree.lua'
@@ -29,7 +26,6 @@ Plug 'kyazdani42/nvim-tree.lua'
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'posva/vim-vue'
-Plug 'ntk148v/vim-horizon'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()

@@ -36,6 +36,7 @@ alias brodate="source $HOME/.config/zsh/zshrc"
 alias l="ls -lap"
 
 alias tu="tmux -f $HOME/.config/tmux/tmux.conf"
+alias sch="scripthub"
 
 alias ungitplugins="find ./wp-content/plugins/ -type d -name ".git" -exec rm -rf "{}" \;"
 

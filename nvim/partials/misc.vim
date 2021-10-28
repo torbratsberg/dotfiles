@@ -68,3 +68,5 @@ function RunJSFunc()
 	exec 'vs'
 	exec 'terminal node ' . expand('%:p')
 endfunction
+
+command! GetIP :!echo $(ipconfig getifaddr en0)<cr>
