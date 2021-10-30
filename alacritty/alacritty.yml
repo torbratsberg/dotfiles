@@ -7,6 +7,8 @@ window:
     x: 5
     y: 5
 
+dynamic_padding: true
+
 font:
   normal:
     family: MesloLGSDZ NF
@@ -115,14 +117,11 @@ key_bindings:
   - { key: Return, mods: Shift,   mode: Search|~Vi, action: None }
 
   # (macOS only)
-  - { key: 8,              mods: Shift|Alt,                 chars: "}" }
-  - { key: Equals,         mods: Command,                    action: None }
-  - { key: Plus,           mods: Command,                    action: None }
+  - { key: Equals,         mods: Command,                    action: IncreaseFontSize }
+  - { key: Plus,           mods: Command,                    action: IncreaseFontSize }
   - { key: NumpadAdd,      mods: Command,                    action: None }
-  - { key: Minus,          mods: Command,                    action: None }
+  - { key: Minus,          mods: Command,                    action: DecreaseFontSize }
   - { key: NumpadSubtract, mods: Command,                    action: None }
-  - { key: V,              mods: Command,                    action: Paste }
-  - { key: C,              mods: Command,                    action: Copy }
   - { key: C,              mods: Command, mode: Vi|~Search,  action: None }
   - { key: H,              mods: Command,                    action: None }
   - { key: H,              mods: Command|Alt,                action: None }
@@ -130,7 +129,9 @@ key_bindings:
   - { key: Q,              mods: Command,                    action: Quit }
   - { key: W,              mods: Command,                    action: Quit }
   - { key: N,              mods: Command,                    action: SpawnNewInstance }
+  - { key: V,              mods: Command,                    action: Paste }
+  - { key: C,              mods: Command,                    action: Copy }
+  - { key: Q,              mods: Control,                    chars:  q }
   - { key: F,              mods: Command|Control,            action: None }
   - { key: F,              mods: Command, mode: ~Search,     action: None }
   - { key: B,              mods: Command, mode: ~Search,     action: None }
-  - { key: Q,              mods: Control,                    chars:  q }
