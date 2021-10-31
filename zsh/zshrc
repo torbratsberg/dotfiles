@@ -4,6 +4,7 @@ export UPDATE_ZSH_DAYS=7
 ZSH_THEME="../../.config/zsh/torbratsberg"
 plugins=()
 source $ZSH/oh-my-zsh.sh
+TERM=xterm-256color
 
 source "$HOME/.config/zsh/private-zshrc.sh"
 
