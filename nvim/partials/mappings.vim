@@ -17,8 +17,8 @@ nmap <leader>qs ciw''<esc>P
 nmap <leader>qb ciw``<esc>P
 
 " Substitution commands
-nmap <leader>ss :%s///g<left><left><left>
-nmap <leader>sw *N:%s///g<left><left>
+nmap <C-s>s :%s///g<left><left><left>
+nmap <C-s>w *N:%s///g<left><left>
 
 " Git commands
 nmap <leader>gs :G<cr>
@@ -46,6 +46,7 @@ nmap <leader>nd :lua require('dirfind').select_dirs()<cr>
 
 " In file movement
 map <leader>a <Plug>(easymotion-bd-f)
+map <leader>s <Plug>(easymotion-bd-fn)
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 
