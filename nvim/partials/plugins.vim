@@ -13,8 +13,8 @@ Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'neovim/nvim-lspconfig'
 
 " Functionality
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'numToStr/Comment.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mattn/emmet-vim'
