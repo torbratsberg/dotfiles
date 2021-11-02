@@ -21,7 +21,6 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'torbratsberg/telescope-dir-find'
 Plug 'SirVer/ultisnips'
-Plug 'kyazdani42/nvim-tree.lua'
 Plug 'ThePrimeagen/harpoon'
 
 " Themes and syntax

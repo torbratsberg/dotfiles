@@ -9,9 +9,9 @@ set nohlsearch
 set noswapfile
 set nowrap
 set nowritebackup
-set number
 set path=**
-set relativenumber
+set nonumber
+set norelativenumber
 set scrolloff=8
 set sidescrolloff=20
 set smartindent

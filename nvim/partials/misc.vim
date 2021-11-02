@@ -1,7 +1,7 @@
 filetype plugin indent on
 autocmd FileType scss setl iskeyword+=@-@
 
-augroup go_save
+augroup format_on_save
 	autocmd!
 	autocmd BufWritePre *.go silent! lua vim.lsp.buf.formatting()
 augroup END
@@ -12,12 +12,12 @@ augroup highlight_yank
 augroup END
 
 " Since <cr> is mapped to SelectIndent(), selecting from qf list did not work
-augroup CrMapFixQf
+augroup cr_map_fix_qf
     autocmd!
     autocmd FileType qf nmap <buffer> <cr> <cr>
 augroup END
 
-function! SelectIndent ()
+function! SelectIndent()
     if indent(line(".")) == 0
         exec "normal vap"
         return
@@ -33,7 +33,7 @@ function! SelectIndent ()
 endfun
 
 " Selects indentation level including empty lines
-function! SelectIndentWithSpace ()
+function! SelectIndentWithSpace()
     if indent(line(".")) == 0
         exec "normal vap"
         return
@@ -48,25 +48,11 @@ function! SelectIndentWithSpace ()
     endwhile
 endfun
 
-nmap <Leader>. :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-    if !exists("*synstack")
-        return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
-
 " JS Stuff
 command! NewReactComponent call NewReactComponentFunc()
 function! NewReactComponentFunc()
     read ~/.config/nvim/templates/react-component.txt
     exec '%s/<++>/' . expand('%:t:r') . '/ge'
-endfunction
-
-command! RunJS call RunJSFunc()
-function RunJSFunc()
-	exec 'vs'
-	exec 'terminal node ' . expand('%:p')
 endfunction
 
 command! GetIP :!echo $(ipconfig getifaddr en0)<cr>

@@ -41,11 +41,11 @@ nmap <leader>g<left> :diffget //2<cr>
 nmap <leader>g<right> :diffget //3<cr>
 
 " Looking up stuff commands
-nmap <leader>f :lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({}))<cr>
-nmap <leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({}))<cr>
-nmap <leader>e :lua require('telescope.builtin').file_browser(require('telescope.themes').get_dropdown({}))<cr>
-nmap <leader>rl :lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<cr>
-nmap <leader>rs :lua require('telescope.builtin').grep_string(require('telescope.themes').get_dropdown({}))<cr>
+nmap <leader>f :lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({}))<cr>
+nmap <leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({}))<cr>
+nmap <leader>e :lua require('telescope.builtin').file_browser(require('telescope.themes').get_ivy({}))<cr>
+nmap <leader>rl :lua require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({}))<cr>
+nmap <leader>rs :lua require('telescope.builtin').grep_string(require('telescope.themes').get_ivy({}))<cr>
 " Customs
 nmap <leader>nv :lua require('luafiles.telescope').search_config()<cr>
 nmap <leader>nn :lua require('luafiles.telescope').search_notes()<cr>
@@ -67,7 +67,6 @@ nmap <leader>cc :so ~/.config/nvim/init.vim<cr>
 nmap <cr> :call SelectIndent()<cr>
 nmap <leader><cr> :call SelectIndentWithSpace()<cr>
 nmap <tab><tab> <C-^>
-nmap <C-f> :NvimTreeToggle<cr>
 nmap ª :move-2<cr>V=<esc>
 nmap √ :move+1<cr>V=<esc>
 vmap < < gv
