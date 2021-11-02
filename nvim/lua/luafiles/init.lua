@@ -37,6 +37,9 @@ require('telescope').setup{
 -- Initiate lsp
 require('luafiles.lsp')
 
+-- Initiate lsp
+require('luafiles.statusline')
+
 -- Initiate nvim-tree
 require'nvim-tree'.setup {
 	disable_netrw = true,
