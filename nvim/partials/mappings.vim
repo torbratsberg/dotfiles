@@ -11,6 +11,14 @@ nmap <leader>cd :lua require('telescope.builtin').lsp_definitions(require('teles
 nmap <leader>ct :lua require('telescope.builtin').lsp_workspace_diagnostics(require('telescope.themes'))<cr>
 nmap <leader>cs :lua require('telescope.builtin').lsp_document_symbols(require('telescope.themes'))<cr>
 
+" Harpoon stuff
+nmap <leader>ha :lua require("harpoon.mark").add_file()<cr>
+nmap <leader>h1 :lua require("harpoon.ui").nav_file(1)<cr>
+nmap <leader>h2 :lua require("harpoon.ui").nav_file(2)<cr>
+nmap <leader>h3 :lua require("harpoon.ui").nav_file(3)<cr>
+nmap <leader>h4 :lua require("harpoon.ui").nav_file(4)<cr>
+nmap <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<cr>
+
 " Add characters
 nmap <leader>qd ciw""<esc>P
 nmap <leader>qs ciw''<esc>P
@@ -77,5 +85,5 @@ imap "<tab> ""<left>
 inoremap {<cr> {<cr>}<esc>O
 
 " Quickfix
-nmap <leader>h :cprev<cr>
-nmap <leader>l :cnext<cr>
+nmap <leader><left> :cprev<cr>
+nmap <leader><right> :cnext<cr>

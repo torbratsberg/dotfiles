@@ -1,6 +1,15 @@
 -- Initiate Comment
 require('Comment').setup()
 
+-- Initiate harpoon
+require("harpoon").setup({
+    global_settings = {
+        save_on_toggle = false,
+        save_on_change = true,
+        enter_on_sendcmd = false,
+    },
+})
+
 -- Initiate Treesitter
 require'nvim-treesitter.configs'.setup{
 	highlight = {
