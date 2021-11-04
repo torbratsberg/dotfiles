@@ -4,3 +4,4 @@ iabbrev ivd var_dump();<Left><Left>
 iabbrev irc rem-calc()<Left>
 iabbrev irr div.row>div.columns.small-12
 iabbrev ier error_log(print_r($, true), 3, '');<left><left><left><cr><esc><up>:read !pwd<cr><up>JJxF<space>xt'a/error_log.txt<esc>F$<right>i
+iabbrev ibs @include breakpoint(small down) {<cr><esc><down>==<up>cc

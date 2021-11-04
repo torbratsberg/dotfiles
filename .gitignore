@@ -4,9 +4,11 @@ karabiner/
 iterm2/
 scripthub/
 sanity/
+github-copilot/
 zsh/.zsh_history
 nvim/plugged/*
 nvim/.netrwhist
 nvim/notes/*
+nvim/pack/
 zsh/private-zshrc.sh
 .DS_Store

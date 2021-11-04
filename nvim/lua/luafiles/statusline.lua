@@ -23,7 +23,7 @@ local function get_file_path()
 	local full_path = vim.fn.expand("%")
 
 	if not full_path or full_path == "" then
-		return "[no name]"
+		return ""
 	end
 
 	-- Get the path into a table
@@ -43,18 +43,22 @@ local function get_git_info(force)
 	if force or not git_branch or git_branch == "" then
 		git_branch = vim.fn["fugitive#head"]()
 		if not git_branch or git_branch == "" then
-			git_branch = '[no git]'
+			return ""
 		end
 	end
 	return "[" .. git_branch .. "]"
 end
 
 local function get_lsp_info()
-	local warnings = vim.lsp.diagnostic.get_count(0, "Warning")
-	local errors = vim.lsp.diagnostic.get_count(0, "Error")
-	local hints = vim.lsp.diagnostic.get_count(0, "Hint")
-	local info = vim.lsp.diagnostic.get_count(0, "Info")
-	return string.format("[I %d H %d W %d E %d]", info, hints, warnings, errors)
+	local w = vim.lsp.diagnostic.get_count(0, "Warning")
+	local e = vim.lsp.diagnostic.get_count(0, "Error")
+	local h = vim.lsp.diagnostic.get_count(0, "Hint")
+
+	if w + e + h  == 0 then
+		return ""
+	end
+
+	return string.format("[H %d W %d E %d]", h, w, e)
 end
 
 -- Put together the statusline

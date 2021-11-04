@@ -8,8 +8,8 @@ nmap <leader>cj :lua vim.lsp.buf.hover()<cr>
 nmap <leader>ca :lua require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor({}))<cr>
 nmap <leader>cr :lua require('telescope.builtin').lsp_references(require('telescope.themes').get_cursor({}))<cr>
 nmap <leader>cd :lua require('telescope.builtin').lsp_definitions(require('telescope.themes').get_cursor({}))<cr>
-nmap <leader>ct :lua require('telescope.builtin').lsp_workspace_diagnostics(require('telescope.themes'))<cr>
-nmap <leader>cs :lua require('telescope.builtin').lsp_document_symbols(require('telescope.themes'))<cr>
+nmap <leader>ct :lua require('telescope.builtin').lsp_workspace_diagnostics(require('telescope.themes').get_ivy({}))<cr>
+nmap <leader>cs :lua require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_ivy({}))<cr>
 
 " Harpoon stuff
 nmap <leader>ha :lua require("harpoon.mark").add_file()<cr>
@@ -18,11 +18,6 @@ nmap <leader>h2 :lua require("harpoon.ui").nav_file(2)<cr>
 nmap <leader>h3 :lua require("harpoon.ui").nav_file(3)<cr>
 nmap <leader>h4 :lua require("harpoon.ui").nav_file(4)<cr>
 nmap <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<cr>
-
-" Add characters
-nmap <leader>qd ciw""<esc>P
-nmap <leader>qs ciw''<esc>P
-nmap <leader>qb ciw``<esc>P
 
 " Substitution commands
 nmap <C-s>s :%s///g<left><left><left>
@@ -35,6 +30,7 @@ nmap <leader>gbr :Telescope git_branches<cr>
 nmap <leader>gd :Gdiffsplit<cr>
 nmap <leader>gll :Git log<cr>
 nmap <leader>gln :Git log --name-status<cr>
+nmap <leader>glo :Git log --oneline<cr>
 nmap <leader>gg :Git pull<cr>
 nmap <leader>gp :Git push<cr>
 nmap <leader>g<left> :diffget //2<cr>
@@ -74,6 +70,8 @@ vmap > > gv
 nmap Y yg_
 nmap n nzzzv
 nmap N Nzzzv
+" imap <Tab> :call copilot#complete()<cr>
+imap <Tab> <Tab>
 
 " Character completion
 imap (<tab> ()<left>
