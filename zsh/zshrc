@@ -30,11 +30,14 @@ alias sshkey="cat $HOME/.ssh/id_rsa.pub | pbcopy"
 alias vhosts="nvim /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf"
 alias hosts="nvim /private/etc/hosts"
 alias dev="bash $HOME/code/bash/dc-devkit/start.sh"
+alias devv="node /Users/torbratsberg/work/dc-devkit/bin/index.js"
+
 alias ip="ipconfig getifaddr en0"
 
 alias brofile="nvim $HOME/.config/zsh/zshrc"
 alias brodate="source $HOME/.config/zsh/zshrc"
-alias l="ls -lap"
+alias l="lsd -la"
+alias tree="lsd --tree"
 
 alias tu="tmux -f $HOME/.config/tmux/tmux.conf"
 alias sch="scripthub"
@@ -49,4 +52,3 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH="$HOME/.local/bin:$PATH"
-
