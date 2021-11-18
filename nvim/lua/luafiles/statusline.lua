@@ -1,4 +1,3 @@
-local write_count = 0
 local git_branch = ""
 
 -- Helper functions
@@ -69,7 +68,6 @@ function Status_line()
 		get_file_path(),           -- The shortened filepath
 		get_lsp_info(),            -- Count of error, warnings and hints
 		"%=",                      -- Move rest of sections to other side
-		"[" .. write_count .. "]", -- How many times I've written any file
 		"[%l:%c]",                 -- Cursor position
 		get_git_info(),            -- Git info
 	}
@@ -79,20 +77,3 @@ end
 
 -- Set the statusline option
 vim.o.statusline = '%!v:lua.Status_line()'
-
-local M = {}
-
--- Update write count
-M.on_write = function()
-	write_count = write_count + 1
-end
-
--- On save, run on_write function above
-vim.api.nvim_exec([[
-	augroup statusline_write_count
-		autocmd!
-		autocmd BufWritePre * :lua require("luafiles.statusline").on_write()
-	augroup END
-]], false)
-
-return M
