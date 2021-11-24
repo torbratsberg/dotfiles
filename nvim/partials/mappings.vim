@@ -45,6 +45,7 @@ nmap <leader>rs :lua require('telescope.builtin').grep_string(require('telescope
 " Customs
 nmap <leader>nv :lua require('luafiles.telescope').search_config()<cr>
 nmap <leader>nn :lua require('luafiles.telescope').search_notes()<cr>
+nmap <leader>nb :lua require('luafiles.telescope').search_bin()<cr>
 nmap <leader>nf :lua require('dirfind').search_dirs()<cr>
 nmap <leader>nd :lua require('dirfind').select_dirs()<cr>
 
