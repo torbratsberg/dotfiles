@@ -30,12 +30,13 @@ alias c="cd $HOME/code"
 alias co="cd $HOME/.config"
 
 alias gs="git status"
+alias gl="git log --graph --stat"
 
 alias nuke="rm -rf"
 
 alias sshkey="cat $HOME/.ssh/id_rsa.pub | pbcopy"
 alias vhosts="nvim /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf"
-alias hosts="nvim /private/etc/hosts"
+alias hosts="sudo nvim /private/etc/hosts"
 alias dev="bash $HOME/code/bash/dc-devkit/start.sh"
 alias devv="node /Users/torbratsberg/work/dc-devkit/bin/index.js"
 alias ip="ipconfig getifaddr en0"
