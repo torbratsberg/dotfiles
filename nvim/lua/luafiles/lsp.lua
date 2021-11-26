@@ -14,11 +14,12 @@ cmp.setup({
 		['<C-e>'] = cmp.mapping.close(),
 		['<CR>'] = cmp.mapping.confirm({ select = true }),
 	},
-	sources = {
-		{name = 'nvim_lsp'},
-		{name = 'buffer'},
-		{name = 'ultisnips'},
-	}
+	sources = cmp.config.sources({
+		{ name = 'nvim_lsp' },
+		{ name = 'ultisnips' },
+	}, {
+		{ name = 'buffer' },
+	})
 })
 
 -- Set up LSP servers

@@ -60,8 +60,7 @@ local function get_lsp_info()
 	return string.format("[H %d W %d E %d]", h, w, e)
 end
 
--- Put together the statusline
-function Status_line()
+function Status_line_active()
 	local sections = {
 		"%#TBBG#",                 -- Define color
 		"[%M%R%W]",                -- Misc info
@@ -69,11 +68,29 @@ function Status_line()
 		get_lsp_info(),            -- Count of error, warnings and hints
 		"%=",                      -- Move rest of sections to other side
 		"[%l:%c]",                 -- Cursor position
-		get_git_info(),            -- Git info
+		"[%{&fileformat}]",        -- File format
+		get_git_info(false),            -- Git info
 	}
 
 	return table.concat(sections, " ")
 end
 
--- Set the statusline option
-vim.o.statusline = '%!v:lua.Status_line()'
+function Status_line_inactive()
+	local sections = {
+		"%#TBBG#",                 -- Define color
+		"[%M]",                    -- Misc info
+		"[%f]",                    -- Full filepath
+		"%=",                      -- Move rest of sections to other side
+		"[%l:%c]",                 -- Cursor position
+	}
+
+	return table.concat(sections, " ")
+end
+
+vim.cmd [[
+augroup Inits
+	autocmd!
+	autocmd WinEnter,BufEnter * lua vim.wo.statusline = '%!v:lua.Status_line_active()'
+	autocmd WinLeave,BufLeave * lua vim.wo.statusline = '%!v:lua.Status_line_inactive()'
+augroup END
+]]
