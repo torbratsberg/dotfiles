@@ -24,7 +24,7 @@ nmap <C-s>s :%s///g<left><left><left>
 nmap <C-s>w *N:%s///g<left><left>
 
 " Git commands
-nmap <leader>gs :G<cr>
+nmap <leader>gs :vertical G<cr>:vertical resize 70<cr>:set winfixwidth<cr>
 nmap <leader>gbl :Git blame<cr>
 nmap <leader>gbr :Telescope git_branches<cr>
 nmap <leader>gd :Gdiffsplit<cr>
@@ -51,7 +51,6 @@ nmap <leader>nd :lua require('dirfind').select_dirs()<cr>
 
 " In file movement
 map <leader>a <Plug>(easymotion-bd-f)
-map <leader>s <Plug>(easymotion-bd-fn)
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 
@@ -71,8 +70,6 @@ vmap > > gv
 nmap Y yg_
 nmap n nzzzv
 nmap N Nzzzv
-" imap <Tab> :call copilot#complete()<cr>
-imap <Tab> <Tab>
 
 " Character completion
 imap (<tab> ()<left>

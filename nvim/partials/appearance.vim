@@ -8,5 +8,5 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let g:tokyonight_style="night"
 colorscheme tokyonight
 
-" Used for statusline
 hi TBBG guibg=NONE guifg=#21bfc2
+hi EndOfBuffer guibg=NONE guifg=#21bfc2
