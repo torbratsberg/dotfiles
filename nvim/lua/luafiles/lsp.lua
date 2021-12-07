@@ -24,12 +24,13 @@ cmp.setup({
 
 -- Set up LSP servers
 local lsp_servers = {
-	'intelephense',
-	'tsserver',
-	'pyright',
-	'cssls',
-	'gopls',
-	'vuels'
+	'tsserver',     -- `npm i -g typescript typescript-language-server`
+	'gopls',        -- `go install golang.org/x/tools/gopls@latest`
+	'cssls',        -- `npm i -g vscode-langservers-extracted`
+	'jsonls',       -- `npm i -g vscode-langservers-extracted`
+	'intelephense', -- `npm install -g intelephense`
+	'pyright',      -- `npm i -g pyright`
+	'vuels',        -- `npm i -g vls`
 }
 
 local lsp_config = require('lspconfig')

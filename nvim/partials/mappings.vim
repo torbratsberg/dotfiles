@@ -56,6 +56,7 @@ map <leader>k <Plug>(easymotion-k)
 
 " Misc commands
 nmap <leader>w :w<cr>
+nmap <leader>y "+y
 vmap <leader>y "+y
 nmap <leader><leader>q :bd<cr>
 tmap <leader><esc> <C-\><C-n>
