@@ -57,6 +57,6 @@ alias docc="docker-compose"
 
 alias vscode-css-language-server="css-language-server --stdio"
 
-alias cds='__cds() { cd "$(fd -d 1 -t d | fzf)" && cd wp-content/themes && cd "$(fd -d 1 -t d | fzf)"}; __cds '
+alias cds='__cds() { cd "$(fd -d 1 -t d | fzf)" && cd wp-content && cd "$(fd -d 2 -t d | fzf)"}; __cds '
 
 HISTFILE=~/.config/zsh/.zsh_history
