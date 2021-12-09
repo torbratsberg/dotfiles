@@ -2,7 +2,7 @@
 alt_send_esc: false
 
 window:
-  decorations: buttonless # transparent none full buttonless
+  decorations: none # transparent none full buttonless
   padding:
     x: 5
     y: 5
