@@ -6,7 +6,9 @@ plugins=()
 source $ZSH/oh-my-zsh.sh
 
 # Private rc file
-source "$HOME/.config/zsh/private-zshrc.sh"
+if [ -z "$HOME/.config/zsh/private-zshrc.sh" ]; then
+	source "$HOME/.config/zsh/private-zshrc.sh"
+fi
 
 # Exports
 export PATH=$PATH:/usr/local/go/bin
