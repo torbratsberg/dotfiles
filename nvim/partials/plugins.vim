@@ -28,6 +28,7 @@ Plug 'github/copilot.vim'
 " Themes and syntax
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'posva/vim-vue'
+Plug 'gruvbox-community/gruvbox'
 Plug 'folke/tokyonight.nvim', {'branch': 'main'}
 
 call plug#end()
