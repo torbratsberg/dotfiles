@@ -31,6 +31,7 @@ local lsp_servers = {
 	'intelephense', -- `npm install -g intelephense`
 	'pyright',      -- `npm i -g pyright`
 	'vuels',        -- `npm i -g vls`
+	'rust_analyzer',
 }
 
 local lsp_config = require('lspconfig')
