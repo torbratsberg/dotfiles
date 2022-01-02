@@ -33,10 +33,11 @@ alias c="cd $HOME/code"
 alias co="cd $HOME/.config"
 
 alias gs="git status"
-alias gl="git log --graph --stat"
+alias gl="git log --graph --stat --dirstat"
+
+alias py3="python3"
 
 alias nuke="rm -rf"
-
 alias sshkey="cat $HOME/.ssh/id_rsa.pub | pbcopy"
 alias vhosts="nvim /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf"
 alias hosts="sudo nvim /private/etc/hosts"
@@ -44,8 +45,6 @@ alias dev="bash $HOME/code/bash/dc-devkit/start.sh"
 alias devv="node /Users/torbratsberg/work/dc-devkit/bin/index.js"
 alias ip="ipconfig getifaddr en0"
 alias l="lsd -la"
-alias tree="lsd --tree"
-alias cheat="bash $HOME/.config/scripts/cheat.sh"
 alias ungitplugins="find ./wp-content/plugins/ -type d -name ".git" -exec rm -rf "{}" \;"
 
 alias brofile="nvim $HOME/.config/zsh/zshrc"
