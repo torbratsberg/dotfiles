@@ -58,6 +58,7 @@ map <leader>k <Plug>(easymotion-k)
 nmap <leader>w :w<cr>
 nmap <leader>y "+y
 vmap <leader>y "+y
+vmap * y/<C-r>0<cr>
 nmap <leader><leader>q :bd<cr>
 tmap <leader><esc> <C-\><C-n>
 nmap <leader>cc :so ~/.config/nvim/init.vim<cr>
