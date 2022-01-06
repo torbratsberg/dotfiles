@@ -4,7 +4,7 @@
 ZSH_THEME="../../.config/zsh/torbratsberg"
 
 PROMPT='
-%{$fg[red]%}%{%T%}%{$reset_color%} in %{$fg_bold[yellow]%}%20<...<%~%<<$reset_color%}$(git_prompt_info) - '
+%{$fg[red]%}%{%T%}%{$reset_color%} in %{$fg_bold[yellow]%}%25<...<%~%<<$reset_color%}$(git_prompt_info) - '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
