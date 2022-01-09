@@ -11,11 +11,11 @@ dynamic_padding: true
 
 font:
   normal:
-    family: MesloLGSDZ NF
+    family: Menlo
 
   offset:
     x: 0
-    y: -2
+    y: 0
 
   size: 16.0
 
