@@ -46,7 +46,7 @@ alias hosts="sudo nvim /private/etc/hosts"
 alias dev="bash $HOME/code/bash/dc-devkit/start.sh"
 alias devv="node /Users/torbratsberg/work/dc-devkit/bin/index.js"
 alias ip="ipconfig getifaddr en0"
-alias l="lsd -la"
+alias l="lsd -la --icon never"
 alias ungitplugins="find ./wp-content/plugins/ -type d -name ".git" -exec rm -rf "{}" \;"
 
 alias brofile="nvim $HOME/.config/zsh/zshrc"

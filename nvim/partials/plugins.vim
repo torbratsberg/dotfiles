@@ -28,7 +28,6 @@ Plug 'github/copilot.vim'
 Plug 'iamcco/markdown-preview.nvim'
 
 " Themes and syntax
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'gruvbox-community/gruvbox'
 Plug 'folke/tokyonight.nvim', {'branch': 'main'}
 
