@@ -10,6 +10,8 @@ if [ -z "$HOME/.config/zsh/private-zshrc.sh" ]; then
 	source "$HOME/.config/zsh/private-zshrc.sh"
 fi
 
+source $HOME/.cargo/env
+
 # Exports
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
@@ -59,5 +61,7 @@ alias docc="docker-compose"
 alias vscode-css-language-server="css-language-server --stdio"
 
 alias cds='__cds() { cd "$(fd -d 1 -t d | fzf)" && cd wp-content && cd "$(fd -d 2 -t d | fzf)"}; __cds '
+
+alias gtc="~/go/bin/gitor_client"
 
 HISTFILE=~/.config/zsh/.zsh_history

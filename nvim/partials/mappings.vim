@@ -8,7 +8,7 @@ nmap <leader>cj :lua vim.lsp.buf.hover()<cr>
 nmap <leader>ca :lua require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor({}))<cr>
 nmap <leader>cr :lua require('telescope.builtin').lsp_references(require('telescope.themes').get_cursor({}))<cr>
 nmap <leader>cd :lua require('telescope.builtin').lsp_definitions(require('telescope.themes').get_cursor({}))<cr>
-nmap <leader>ct :lua require('telescope.builtin').lsp_workspace_diagnostics(require('telescope.themes').get_ivy({}))<cr>
+nmap <leader>ct :lua require('telescope.builtin').diagnostics(require('telescope.themes').get_ivy({}))<cr>
 nmap <leader>cs :lua require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_ivy({}))<cr>
 
 " Harpoon stuff
