@@ -4,8 +4,8 @@ alt_send_esc: false
 window:
   decorations: full # transparent none full buttonless
   padding:
-    x: 5
-    y: 5
+    x: 0
+    y: 0
 
 dynamic_padding: true
 
@@ -17,7 +17,7 @@ font:
     x: 0
     y: 0
 
-  size: 16.0
+  size: 18.0
 
   use_thin_strokes: true
 
