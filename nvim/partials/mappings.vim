@@ -72,6 +72,7 @@ vmap > > gv
 nmap Y yg_
 nmap n nzzzv
 nmap N Nzzzv
+nmap <leader>pb :!go install<cr>
 
 " Character completion
 imap (<tab> ()<left>
