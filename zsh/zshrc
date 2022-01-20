@@ -65,4 +65,9 @@ alias cds='__cds() { cd "$(fd -d 1 -t d | fzf)" && cd wp-content && cd "$(fd -d 
 alias gtc="~/go/bin/gitor_client"
 alias nv="nvim"
 
+pidportfunction() {
+	lsof -n -i4TCP:$1 | grep LISTEN
+}
+alias pidport=pidportfunction
+
 HISTFILE=~/.config/zsh/.zsh_history
