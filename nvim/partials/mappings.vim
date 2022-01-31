@@ -17,6 +17,7 @@ nmap <leader>h1 :lua require("harpoon.ui").nav_file(1)<cr>
 nmap <leader>h2 :lua require("harpoon.ui").nav_file(2)<cr>
 nmap <leader>h3 :lua require("harpoon.ui").nav_file(3)<cr>
 nmap <leader>h4 :lua require("harpoon.ui").nav_file(4)<cr>
+nmap <leader>h5 :lua require("harpoon.ui").nav_file(5)<cr>
 nmap <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<cr>
 
 " Substitution commands
