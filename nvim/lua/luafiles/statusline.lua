@@ -49,9 +49,9 @@ local function get_git_info(force)
 end
 
 local function get_lsp_info()
-	local w = vim.lsp.diagnostic.get_count(0, "Warning")
-	local e = vim.lsp.diagnostic.get_count(0, "Error")
-	local h = vim.lsp.diagnostic.get_count(0, "Hint")
+	local w = table_length(vim.diagnostic.get(0, {severity = "w"}))
+	local e = table_length(vim.diagnostic.get(0, {severity = "e"}))
+	local h = table_length(vim.diagnostic.get(0, {severity = "h"}))
 
 	if w + e + h  == 0 then
 		return ""
