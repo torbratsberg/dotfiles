@@ -16,7 +16,7 @@ require'nvim-treesitter.configs'.setup{
 		enable = true
 	},
 	indent = {
-		enable = true,
+		enable = false,
 	}
 }
 
@@ -39,3 +39,27 @@ require('luafiles.lsp')
 
 -- Initiate lsp
 require('luafiles.statusline')
+
+-- Initiate biscuits
+require('nvim-biscuits').setup({
+	toggle_keybind = "<leader>cb",
+	default_config = {
+		max_length = 200,
+		min_distance = 1,
+		prefix_string = " @ "
+	},
+	language_config = {
+		javascript = {
+			prefix_string = " @ ",
+		},
+		php = {
+			prefix_string = " @ ",
+		},
+		html = {
+			disabled = true
+		},
+		python = {
+			disabled = true
+		}
+	}
+})
