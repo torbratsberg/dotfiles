@@ -49,17 +49,11 @@ require('nvim-biscuits').setup({
 		prefix_string = " @ "
 	},
 	language_config = {
-		javascript = {
-			prefix_string = " @ ",
-		},
-		php = {
-			prefix_string = " @ ",
+		python = {
+			disabled = true
 		},
 		html = {
 			disabled = true
 		},
-		python = {
-			disabled = true
-		}
 	}
 })
