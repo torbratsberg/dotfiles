@@ -1,6 +1,11 @@
 filetype plugin indent on
 autocmd FileType scss setl iskeyword+=@-@
 
+augroup DisableCopilotDefault
+	autocmd!
+	autocmd BufEnter * silent! let b:copilot_enabled = 0
+augroup END
+
 augroup format_on_save
 	autocmd!
 	autocmd BufWritePre *.go silent! lua vim.lsp.buf.formatting()
