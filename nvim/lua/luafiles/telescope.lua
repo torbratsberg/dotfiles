@@ -14,11 +14,4 @@ M.search_notes = function()
 	})
 end
 
-M.search_bin = function()
-	require('telescope.builtin').find_files({
-		prompt_title = 'NVIM Config files',
-		cwd = '~/bingo/',
-	})
-end
-
 return M

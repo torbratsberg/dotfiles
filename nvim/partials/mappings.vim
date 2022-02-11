@@ -17,7 +17,6 @@ nmap <leader>h1 :lua require("harpoon.ui").nav_file(1)<cr>
 nmap <leader>h2 :lua require("harpoon.ui").nav_file(2)<cr>
 nmap <leader>h3 :lua require("harpoon.ui").nav_file(3)<cr>
 nmap <leader>h4 :lua require("harpoon.ui").nav_file(4)<cr>
-nmap <leader>h5 :lua require("harpoon.ui").nav_file(5)<cr>
 nmap <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<cr>
 
 " Substitution commands
@@ -31,7 +30,6 @@ nmap <leader>gbr :Telescope git_branches<cr>
 nmap <leader>gd :Gdiffsplit<cr>
 nmap <leader>gll :Git log<cr>
 nmap <leader>gln :Git log --name-status<cr>
-nmap <leader>glo :Git log --oneline<cr>
 nmap <leader>gg :Git pull<cr>
 nmap <leader>gp :Git push<cr>
 nmap <leader>g<left> :diffget //2<cr>
@@ -40,13 +38,11 @@ nmap <leader>g<right> :diffget //3<cr>
 " Looking up stuff commands
 nmap <leader>f :lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({}))<cr>
 nmap <leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({}))<cr>
-nmap <leader>e :lua require('telescope.builtin').file_browser(require('telescope.themes').get_ivy({}))<cr>
 nmap <leader>rl :lua require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({}))<cr>
 nmap <leader>rs :lua require('telescope.builtin').grep_string(require('telescope.themes').get_ivy({}))<cr>
 " Customs
 nmap <leader>nv :lua require('luafiles.telescope').search_config()<cr>
 nmap <leader>nn :lua require('luafiles.telescope').search_notes()<cr>
-nmap <leader>nb :lua require('luafiles.telescope').search_bin()<cr>
 nmap <leader>nf :lua require('dirfind').search_dirs()<cr>
 nmap <leader>nd :lua require('dirfind').select_dirs()<cr>
 
@@ -73,7 +69,6 @@ vmap > > gv
 nmap Y yg_
 nmap n nzzzv
 nmap N Nzzzv
-nmap <leader>pb :!go install<cr>
 
 " Character completion
 imap (<tab> ()<left>

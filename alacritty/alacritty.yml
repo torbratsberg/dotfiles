@@ -79,7 +79,7 @@ schemes:
       cyan:    '0x0db9d7'
       white:   '0xacb0d0'
 
-colors: *gruvbox
+colors: *tokyo-night
 
 key_bindings:
   # Vi Mode
