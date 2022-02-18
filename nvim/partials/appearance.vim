@@ -11,7 +11,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " colorscheme gruvbox
 
 " Tokyonight
-let g:tokyonight_style="night"
-colorscheme tokyonight
-hi TBBG guibg=#1f2335 guifg=#21bfc2
-hi EndOfBuffer guibg=NONE guifg=#21bfc2
+" let g:tokyonight_style="night"
+" colorscheme tokyonight
+" hi TBBG guibg=#1f2335 guifg=#21bfc2
+" hi EndOfBuffer guibg=NONE guifg=#21bfc2
+
+colorscheme torte
