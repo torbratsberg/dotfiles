@@ -19,6 +19,12 @@ nmap <leader>h3 :lua require("harpoon.ui").nav_file(3)<cr>
 nmap <leader>h4 :lua require("harpoon.ui").nav_file(4)<cr>
 nmap <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<cr>
 
+" Jvim
+nnoremap <left> :lua require("jvim").to_parent()<CR>
+nnoremap <right> :lua require("jvim").descend()<CR>
+nnoremap <up> :lua require("jvim").prev_sibling()<CR>
+nnoremap <down> :lua require("jvim").next_sibling()<CR>
+
 " Substitution commands
 nmap <C-s>s :%s///g<left><left><left>
 nmap <C-s>w *N:%s///g<left><left>

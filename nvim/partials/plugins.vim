@@ -32,4 +32,6 @@ Plug 'iamcco/markdown-preview.nvim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'folke/tokyonight.nvim', {'branch': 'main'}
 
+Plug 'ThePrimeagen/jvim.nvim'
+
 call plug#end()
