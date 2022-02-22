@@ -27,11 +27,10 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'tpope/vim-surround'
 Plug 'github/copilot.vim'
 Plug 'iamcco/markdown-preview.nvim'
+Plug 'ThePrimeagen/jvim.nvim'
 
 " Themes and syntax
 Plug 'gruvbox-community/gruvbox'
 Plug 'folke/tokyonight.nvim', {'branch': 'main'}
-
-Plug 'ThePrimeagen/jvim.nvim'
 
 call plug#end()

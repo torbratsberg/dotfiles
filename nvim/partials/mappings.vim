@@ -20,10 +20,17 @@ nmap <leader>h4 :lua require("harpoon.ui").nav_file(4)<cr>
 nmap <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<cr>
 
 " Jvim
-nnoremap <left> :lua require("jvim").to_parent()<CR>
-nnoremap <right> :lua require("jvim").descend()<CR>
-nnoremap <up> :lua require("jvim").prev_sibling()<CR>
-nnoremap <down> :lua require("jvim").next_sibling()<CR>
+augroup JVIM
+	autocmd!
+	autocmd BufEnter * nnoremap <left> <left>
+	autocmd BufEnter * nnoremap <right> <right>
+	autocmd BufEnter * nnoremap <up> <up>
+	autocmd BufEnter * nnoremap <down> <down>
+	autocmd BufEnter *.json nnoremap <left> :lua require("jvim").to_parent()<CR>
+	autocmd BufEnter *.json nnoremap <right> :lua require("jvim").descend()<CR>
+	autocmd BufEnter *.json nnoremap <up> :lua require("jvim").prev_sibling()<CR>
+	autocmd BufEnter *.json nnoremap <down> :lua require("jvim").next_sibling()<CR>
+augroup END
 
 " Substitution commands
 nmap <C-s>s :%s///g<left><left><left>
@@ -75,13 +82,6 @@ vmap > > gv
 nmap Y yg_
 nmap n nzzzv
 nmap N Nzzzv
-
-" Character completion
-imap (<tab> ()<left>
-imap [<tab> []<left>
-imap {<tab> {}<left>
-imap '<tab> ''<left>
-imap "<tab> ""<left>
 inoremap {<cr> {<cr>}<esc>O
 
 " Quickfix
