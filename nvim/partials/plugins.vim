@@ -18,7 +18,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'numToStr/Comment.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'code-biscuits/nvim-biscuits'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'torbratsberg/telescope-dir-find'

@@ -37,23 +37,5 @@ require('telescope').setup{
 -- Initiate lsp
 require('luafiles.lsp')
 
--- Initiate lsp
+-- Initiate statusline
 require('luafiles.statusline')
-
--- Initiate biscuits
-require('nvim-biscuits').setup({
-	toggle_keybind = "<leader>cb",
-	default_config = {
-		max_length = 200,
-		min_distance = 1,
-		prefix_string = " @ "
-	},
-	language_config = {
-		python = {
-			disabled = true
-		},
-		html = {
-			disabled = true
-		},
-	}
-})
