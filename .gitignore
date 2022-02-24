@@ -13,4 +13,5 @@ nvim/pack/
 zsh/private-zshrc.sh
 .DS_Store
 gitor/
+tmux/plugins/
 StardewValley/
