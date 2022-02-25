@@ -1,5 +1,3 @@
-local git_branch = ""
-
 -- Helper functions
 
 local function split(inputstr, sep)
@@ -38,14 +36,8 @@ local function get_file_path()
 	return "[" .. final_path .. file_name .. "]"
 end
 
-local function get_git_info(force)
-	if force or not git_branch or git_branch == "" then
-		git_branch = vim.fn["fugitive#head"]()
-		if not git_branch or git_branch == "" then
-			return ""
-		end
-	end
-	return "[" .. git_branch .. "]"
+local function get_git_info()
+	return "[" .. vim.fn["fugitive#head"]() .. "]"
 end
 
 local function get_lsp_info()
@@ -69,7 +61,7 @@ function Status_line_active()
 		"%=",                      -- Move rest of sections to other side
 		"[%l:%c]",                 -- Cursor position
 		"[%{&fileformat}]",        -- File format
-		get_git_info(false),            -- Git info
+		get_git_info(),            -- Git info
 	}
 
 	return table.concat(sections, " ")
