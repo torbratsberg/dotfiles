@@ -1,8 +1,0 @@
-javascript
-php
-python
-nodejs
-typescript
-css
-scss
-bash
