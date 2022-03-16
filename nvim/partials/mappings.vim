@@ -19,19 +19,6 @@ nmap <leader>h3 :lua require("harpoon.ui").nav_file(3)<cr>
 nmap <leader>h4 :lua require("harpoon.ui").nav_file(4)<cr>
 nmap <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<cr>
 
-" Jvim
-augroup JVIM
-	autocmd!
-	autocmd BufEnter * nnoremap <left> <left>
-	autocmd BufEnter * nnoremap <right> <right>
-	autocmd BufEnter * nnoremap <up> <up>
-	autocmd BufEnter * nnoremap <down> <down>
-	autocmd BufEnter *.json nnoremap <left> :lua require("jvim").to_parent()<CR>
-	autocmd BufEnter *.json nnoremap <right> :lua require("jvim").descend()<CR>
-	autocmd BufEnter *.json nnoremap <up> :lua require("jvim").prev_sibling()<CR>
-	autocmd BufEnter *.json nnoremap <down> :lua require("jvim").next_sibling()<CR>
-augroup END
-
 " Substitution commands
 nmap <C-s>s :%s///g<left><left><left>
 nmap <C-s>w *N:%s///g<left><left>

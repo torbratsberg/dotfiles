@@ -26,6 +26,5 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'tpope/vim-surround'
 Plug 'github/copilot.vim'
 Plug 'iamcco/markdown-preview.nvim'
-Plug 'ThePrimeagen/jvim.nvim'
 
 call plug#end()
