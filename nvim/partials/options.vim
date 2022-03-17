@@ -1,7 +1,7 @@
 set colorcolumn=80
 set completeopt=menu,noinsert,noselect
 set noexpandtab
-set hidden
+set nohidden
 set history=400
 set laststatus=2
 set lazyredraw
@@ -21,3 +21,5 @@ set tabstop=4
 set shiftwidth=4
 set updatetime=100
 set signcolumn=yes
+set list
+set listchars=tab:\|\ ,eol:\\,nbsp:~,trail:-,
