@@ -27,4 +27,6 @@ Plug 'tpope/vim-surround'
 Plug 'github/copilot.vim'
 Plug 'iamcco/markdown-preview.nvim'
 
+Plug 'ggandor/lightspeed.nvim'
+
 call plug#end()
