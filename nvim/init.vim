@@ -5,4 +5,4 @@ runtime! partials/mappings.vim
 runtime! partials/abbrevations.vim
 runtime! partials/misc.vim
 
-lua require('luafiles')
+lua require('core')
