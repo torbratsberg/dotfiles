@@ -41,7 +41,6 @@ require('luafiles.lsp')
 require('luafiles.statusline')
 
 require('lightspeed').setup{
-	ignore_case = true,
 	exit_after_idle_msecs = {unlabeled = 1000, labeled = nil},
 	limit_ft_matches = 4,
 }

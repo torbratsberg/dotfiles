@@ -21,5 +21,5 @@ set tabstop=4
 set shiftwidth=4
 set updatetime=100
 set signcolumn=yes
-set list
+set nolist
 set listchars=tab:\|\ ,eol:\\,nbsp:~,trail:-,
