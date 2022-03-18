@@ -34,11 +34,9 @@ require('telescope').setup{
 	}
 }
 
--- Initiate lsp
 require('luafiles.lsp')
-
--- Initiate statusline
 require('luafiles.statusline')
+require('luafiles.options')
 
 require('lightspeed').setup{
 	exit_after_idle_msecs = {unlabeled = 1000, labeled = nil},
