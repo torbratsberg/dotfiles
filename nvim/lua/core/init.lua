@@ -34,10 +34,10 @@ require('telescope').setup{
 	}
 }
 
+-- Require local config files
 require('core.lsp')
 require('core.statusline')
 require('core.options')
-require('core.mappings')
 
 require('lightspeed').setup{
 	exit_after_idle_msecs = {unlabeled = 1000, labeled = nil},
