@@ -57,6 +57,8 @@ alias tu="tmux -f $HOME/.config/tmux/tmux.conf"
 alias sch="scripthub"
 
 alias cds='__cds() { cd "$(fd -d 1 -t d | fzf)" && cd wp-content && cd "$(fd -d 2 -t d | fzf)"}; __cds '
+alias tur='tmux rename-window "$(basename ${PWD})"'
+
 
 alias gtc="~/go/bin/gitor_client"
 alias nv="nvim"
