@@ -34,12 +34,13 @@ require('telescope').setup{
 	}
 }
 
--- Require local config files
-require('core.lsp')
-require('core.statusline')
-require('core.options')
-
+-- Initiate lightspeed
 require('lightspeed').setup{
 	exit_after_idle_msecs = {unlabeled = 1000, labeled = nil},
 	limit_ft_matches = 4,
 }
+
+-- Require local config files
+require('core.lsp')
+require('core.statusline')
+require('core.options')

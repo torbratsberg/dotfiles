@@ -24,3 +24,11 @@ set.updatetime = 100
 set.signcolumn = "yes"
 set.list = false
 set.grepprg="rg --vimgrep --hidden"
+set.background="dark"
+set.guifont="Meslo:h15"
+set.guicursor="a:blinkoff0-block"
+set.termguicolors=true
+
+-- Misc settings
+vim.cmd('syntax on')
+vim.cmd('colorscheme catppuccin')
