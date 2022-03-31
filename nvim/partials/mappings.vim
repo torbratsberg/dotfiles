@@ -8,7 +8,7 @@ nmap <leader>cj :lua vim.lsp.buf.hover()<cr>
 nmap <leader>ca :lua require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor({}))<cr>
 nmap <leader>cr :lua require('telescope.builtin').lsp_references(require('telescope.themes').get_cursor({}))<cr>
 nmap <leader>cd :lua require('telescope.builtin').lsp_definitions(require('telescope.themes').get_cursor({}))<cr>
-nmap <leader>ct :lua require('telescope.builtin').diagnostics(require('telescope.themes').get_ivy({}))<cr>
+nmap <leader>ct :lua vim.lsp.diagnostic.set_loclist()<cr>
 nmap <leader>cs :lua require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_ivy({}))<cr>
 
 " Harpoon stuff
@@ -19,7 +19,7 @@ nmap <leader>h3 :lua require("harpoon.ui").nav_file(3)<cr>
 nmap <leader>h4 :lua require("harpoon.ui").nav_file(4)<cr>
 nmap <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<cr>
 
-Substitution commands
+" Substitution commands
 nmap <C-s>s :%s///g<left><left><left>
 nmap <C-s>w *N:%s///g<left><left>
 
@@ -38,18 +38,14 @@ nmap <leader>g<right> :diffget //3<cr>
 " Looking up stuff commands
 nmap <leader>f :lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({}))<cr>
 nmap <leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({}))<cr>
-nmap <leader>rl :lua require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({}))<cr>
-nmap <leader>rs :lua require('telescope.builtin').grep_string(require('telescope.themes').get_ivy({}))<cr>
 " Customs
 nmap <leader>nv :lua require('core.telescope').search_config()<cr>
 nmap <leader>nn :lua require('core.telescope').search_notes()<cr>
-nmap <leader>nf :lua require('dirfind').search_dirs()<cr>
-nmap <leader>nd :lua require('dirfind').select_dirs()<cr>
 
 " In file movement
-map <leader>a <Plug>(easymotion-bd-f)
-map <leader>j <Plug>(easymotion-j)
-map <leader>k <Plug>(easymotion-k)
+" map <leader>a <Plug>(easymotion-bd-f)
+" map <leader>j <Plug>(easymotion-j)
+" map <leader>k <Plug>(easymotion-k)
 
 " Misc commands
 nmap <leader>w :w<cr>
@@ -71,6 +67,8 @@ nmap n nzzzv
 nmap N Nzzzv
 inoremap {<cr> {<cr>}<esc>O
 
-" Quickfix
-nmap <leader><left> :cprev<cr>
-nmap <leader><right> :cnext<cr>
+" Quickfix and local lists
+nmap <leader>j :cprev<cr>
+nmap <leader>k :cnext<cr>
+nmap <leader>u :lprev<cr>
+nmap <leader>i :lnext<cr>

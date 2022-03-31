@@ -20,13 +20,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-eunuch'
-Plug 'torbratsberg/telescope-dir-find'
 Plug 'SirVer/ultisnips'
 Plug 'ThePrimeagen/harpoon'
 Plug 'tpope/vim-surround'
 Plug 'github/copilot.vim'
 Plug 'iamcco/markdown-preview.nvim'
-
 Plug 'ggandor/lightspeed.nvim'
 
 call plug#end()
