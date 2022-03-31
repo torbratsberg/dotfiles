@@ -79,35 +79,44 @@ schemes:
       cyan:    '0x0db9d7'
       white:   '0xacb0d0'
 
-  blood-moon: &blood-moon
-    # Default colors
+  blood-moon: &catppuccin
+      # Default colors
     primary:
-      background: '0x10100E'
-      foreground: '0xC6C6C4'
+      background: '0x1E1D2F'
+      foreground: '0xD9E0EE'
+
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: '0x1E1D2F'
+      cursor: '0xF5E0DC'
 
     # Normal colors
     normal:
-      black:   '0x10100E'
-      red:     '0xC40233'
-      green:   '0x009F6B'
-      yellow:  '0xFFD700'
-      blue:    '0x0087BD'
-      magenta: '0x9A4EAE'
-      cyan:    '0x20B2AA'
-      white:   '0xC6C6C4'
+      black:   '0x6E6C7E'
+      red:     '0xF28FAD'
+      green:   '0xABE9B3'
+      yellow:  '0xFAE3B0'
+      blue:    '0x96CDFB'
+      magenta: '0xF5C2E7'
+      cyan:    '0x89DCEB'
+      white:   '0xD9E0EE'
 
     # Bright colors
     bright:
-      black:   '0x696969'
-      red:     '0xFF2400'
-      green:   '0x03C03C'
-      yellow:  '0xFDFF00'
-      blue:    '0x007FFF'
-      magenta: '0xFF1493'
-      cyan:    '0x00CCCC'
-      white:   '0xFFFAFA'
+      black:   '0x988BA2'
+      red:     '0xF28FAD'
+      green:   '0xABE9B3'
+      yellow:  '0xFAE3B0'
+      blue:    '0x96CDFB'
+      magenta: '0xF5C2E7'
+      cyan:    '0x89DCEB'
+      white:   '0xD9E0EE'
 
-colors: *blood-moon
+    indexed_colors:
+      - { index: 16, color: '0xF8BD96' }
+      - { index: 17, color: '0xF5E0DC' }
+
+colors: *catppuccin
 
 key_bindings:
   - { key: Equals,    mods: Command, action: IncreaseFontSize }
