@@ -29,4 +29,7 @@ Plug 'iamcco/markdown-preview.nvim'
 
 Plug 'ggandor/lightspeed.nvim'
 
+" Colorschemes
+Plug 'catppuccin/nvim'
+
 call plug#end()
