@@ -63,3 +63,14 @@ ls.add_snippets("php", {
 		i(0),
 	}),
 })
+
+ls.add_snippets("go", {
+	s("err", { -- if err != nil {...
+		t("if "),
+		i(1, "err"),
+		t(" != nil "),
+		t({"{", "\t"}),
+		i(0, "panic(err)"),
+		t({"", "}"}),
+	}),
+})
