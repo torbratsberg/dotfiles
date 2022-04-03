@@ -44,3 +44,4 @@ require('lightspeed').setup{
 require('core.lsp')
 require('core.statusline')
 require('core.options')
+require('core.luasnip')

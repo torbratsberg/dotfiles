@@ -67,6 +67,10 @@ nmap n nzzzv
 nmap N Nzzzv
 inoremap {<cr> {<cr>}<esc>O
 
+" Luasnip
+inoremap <C-f> <cmd> :lua require('luasnip').expand_or_jump()<cr>
+snoremap <C-f> <cmd> :lua require('luasnip').expand_or_jump()<cr>
+
 " Quickfix and local lists
 nmap <leader>j :cprev<cr>
 nmap <leader>k :cnext<cr>
