@@ -19,6 +19,14 @@ ls.add_snippets("scss", {
 		t(")"),
 		i(0),
 	}),
+	s("fx", { -- display: flex;\n...
+		t("display: flex;"),
+		t({"", "justify-content: "}),
+		i(1, "center"),
+		t({";", "align-items: "}),
+		i(2, "center"),
+		t(";"),
+	}),
 	s("bp", { -- @include breakpoint(small down) {...
 		t("@include breakpoint("),
 		i(1, "small"),
