@@ -43,14 +43,13 @@ end
 local function get_lsp_info()
 	local w = table_length(vim.diagnostic.get(0, {severity = "w"}))
 	local e = table_length(vim.diagnostic.get(0, {severity = "e"}))
-	local h = table_length(vim.diagnostic.get(0, {severity = "h"}))
 	local n = table_length(vim.diagnostic.get(0, {severity = "n"}))
 
-	if w + e + h + n == 0 then
+	if w + e + n == 0 then
 		return ""
 	end
 
-	return string.format("[H %d W %d E %d N %d]", h, w, e, n)
+	return string.format("[W %d E %d N %d]", w, e, n)
 end
 
 function Status_line_active()
