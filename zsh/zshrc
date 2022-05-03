@@ -28,6 +28,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 TERM=xterm-256color
 
+# Misc `cd` commands
 alias m="cd $HOME/main"
 alias s="cd $HOME/sites"
 alias t="cd wp-content/themes/"
@@ -35,8 +36,11 @@ alias p="cd wp-content/plugins/"
 alias c="cd $HOME/code"
 alias co="cd $HOME/.config"
 
+# Misc git shortcuts
 alias gs="git status"
 alias gl="git log --graph --stat --dirstat"
+alias gp="git push"
+alias gg="git pull"
 
 alias py3="python3"
 
