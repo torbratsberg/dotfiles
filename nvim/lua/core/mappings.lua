@@ -68,6 +68,8 @@ set('n', '<leader>ca', function() require('telescope.builtin').lsp_code_actions(
 set('n', '<leader>cr', function() require('telescope.builtin').lsp_references(require('telescope.themes').get_cursor({})) end)
 set('n', '<leader>cd', function() require('telescope.builtin').lsp_definitions(require('telescope.themes').get_cursor({})) end)
 set('n', '<leader>cs', function() require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_ivy({})) end)
+set('i', '<C-n>', function() require'cmp'.select_next_item() end)
+set('i', '<C-p>', function() require'cmp'.select_prev_item() end)
 
 -- Luasnip
 set('i', '<C-f>', function() require('luasnip').expand_or_jump() end)
