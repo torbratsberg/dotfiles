@@ -24,12 +24,12 @@ local function get_file_path()
 	end
 
 	-- Get the path into a table
-	path_table = split(full_path, "/")
-	file_name = table.remove(path_table, table_length(path_table), 1)
+	local path_table = split(full_path, "/")
+	local file_name = table.remove(path_table, table_length(path_table), 1)
 
 	-- Put together the file path with only the x first chars of each dir
-	final_path = ""
-	for i, dir in ipairs(path_table) do
+	local final_path = ""
+	for _, dir in ipairs(path_table) do
 		dir = string.sub(dir, 1, 3)
 		final_path = final_path .. dir .. "/"
 	end
