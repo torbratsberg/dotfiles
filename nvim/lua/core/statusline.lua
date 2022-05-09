@@ -16,6 +16,10 @@ end
 
 -- Section functions
 
+local function get_misc_info()
+	return "[%#Error#%M%R%W%#TBBG#]"
+end
+
 local function get_file_path()
 	local full_path = vim.fn.expand("%")
 
@@ -33,35 +37,48 @@ local function get_file_path()
 		dir = string.sub(dir, 1, 3)
 		final_path = final_path .. dir .. "/"
 	end
-	return "[" .. final_path .. file_name .. "]"
-end
-
-local function get_git_info()
-	return "[" .. vim.fn["fugitive#head"]() .. "]"
+	return "[%#Title#" .. final_path .. file_name .. "%#TBBG#]"
 end
 
 local function get_lsp_info()
-	local w = table_length(vim.diagnostic.get(0, {severity = "w"}))
 	local e = table_length(vim.diagnostic.get(0, {severity = "e"}))
+	local w = table_length(vim.diagnostic.get(0, {severity = "w"}))
 	local n = table_length(vim.diagnostic.get(0, {severity = "n"}))
 
 	if w + e + n == 0 then
 		return ""
 	end
 
-	return string.format("[W %d E %d N %d]", w, e, n)
+	local err = '%#DiagnosticError#'
+	local warn = '%#DiagnosticWarn#'
+	local info = '%#DiagnosticInfo#'
+	local reset = '%#TBBG#'
+
+	return string.format("[%sE:%d %sW:%d %sN:%d%s]", err, e, warn, w, info, n, reset)
+end
+
+local function get_cursor_position()
+	return "[%#Constant#%l:%c%#TBBG#]"
+end
+
+local function get_file_format()
+	return "[%#Directory#%{&fileformat}%#TBBG#]"
+end
+
+local function get_git_info()
+	return "[%#GitSignsAdd#" .. vim.fn["fugitive#head"]() .. "%#TBBG#]"
 end
 
 function Status_line_active()
 	local sections = {
-		"%#TBBG#",                 -- Define color
-		"[%M%R%W]",                -- Misc info
-		get_file_path(),           -- The shortened filepath
-		get_lsp_info(),            -- Count of error, warnings and hints
-		"%=",                      -- Move rest of sections to other side
-		"[%l:%c]",                 -- Cursor position
-		"[%{&fileformat}]",        -- File format
-		get_git_info(),            -- Git info
+		"%#TBBG#",             -- Define color
+		get_misc_info(),	   -- Misc info
+		get_file_path(),       -- The shortened filepath
+		get_lsp_info(),        -- Count of error, warnings and hints
+		"%=",                  -- Move rest of sections to other side
+		get_cursor_position(), -- Cursor position
+		get_file_format(),     -- File format
+		get_git_info(),        -- Git info
 	}
 
 	return table.concat(sections, " ")
