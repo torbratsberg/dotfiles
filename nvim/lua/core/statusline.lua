@@ -54,7 +54,10 @@ local function get_lsp_info()
 	local info = '%#DiagnosticInfo#'
 	local reset = '%#TBBG#'
 
-	return string.format("[%sE:%d %sW:%d %sN:%d%s]", err, e, warn, w, info, n, reset)
+	return string.format(
+		"[%sE:%d %sW:%d %sN:%d%s]",
+		err, e, warn, w, info, n, reset
+	)
 end
 
 local function get_cursor_position()

@@ -36,8 +36,8 @@ require('telescope').setup{
 
 -- Initiate lightspeed
 require('lightspeed').setup{
-	exit_after_idle_msecs = {unlabeled = 1000, labeled = nil},
-	limit_ft_matches = 4,
+	jump_to_unique_chars = false,
+	safe_labels = {},
 }
 
 -- Require local config files
@@ -46,3 +46,4 @@ require('core.statusline')
 require('core.options')
 require('core.luasnip')
 require('core.mappings')
+require('core.autocmds')

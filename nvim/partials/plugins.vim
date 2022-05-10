@@ -17,14 +17,11 @@ Plug 'saadparwaiz1/cmp_luasnip'
 " Functionality
 Plug 'tpope/vim-fugitive'
 Plug 'numToStr/Comment.nvim'
-Plug 'easymotion/vim-easymotion'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-eunuch'
-Plug 'SirVer/ultisnips'
 Plug 'ThePrimeagen/harpoon'
 Plug 'tpope/vim-surround'
-Plug 'github/copilot.vim'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'ggandor/lightspeed.nvim'
 
