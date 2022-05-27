@@ -12,32 +12,32 @@ require("harpoon").setup({
 
 -- Initiate Treesitter
 require'nvim-treesitter.configs'.setup{
-	highlight = {
-		enable = true
-	},
-	indent = {
-		enable = false,
-	}
+    highlight = {
+        enable = true
+    },
+    indent = {
+        enable = false,
+    }
 }
 
 -- Telescope configs
 require('telescope').setup{
-	defaults = {
-		file_ignore_patterns = {'%.png', '%.otf', '%.jpg', '%.jpeg', '%.woff', '%.woff2', '%.ttf', '%.eot', '%.map', '%.po',},
-		file_sorter = require('telescope.sorters').get_fzy_sorter,
-	},
-	extensions = {
-		fzy_native = {
-			override_generic_sorter = false,
-			override_file_sorter = true,
-		}
-	}
+    defaults = {
+        file_ignore_patterns = {'%.png', '%.otf', '%.jpg', '%.jpeg', '%.woff', '%.woff2', '%.ttf', '%.eot', '%.map', '%.po',},
+        file_sorter = require('telescope.sorters').get_fzy_sorter,
+    },
+    extensions = {
+        fzy_native = {
+            override_generic_sorter = false,
+            override_file_sorter = true,
+        }
+    }
 }
 
 -- Initiate lightspeed
 require('lightspeed').setup{
-	jump_to_unique_chars = false,
-	safe_labels = {},
+    jump_to_unique_chars = false,
+    safe_labels = {},
 }
 
 -- Require local config files
