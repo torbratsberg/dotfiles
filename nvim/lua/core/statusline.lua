@@ -69,7 +69,7 @@ local function get_file_format()
 end
 
 local function get_git_info()
-    return "[%#GitSignsAdd#" .. vim.fn["fugitive#head"]() .. "%#TBBG#]"
+    return "[%#GitSignsAdd#" .. vim.fn.FugitiveHead() .. "%#TBBG#]"
 end
 
 function Status_line_active()
