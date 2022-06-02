@@ -24,6 +24,7 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'ggandor/lightspeed.nvim'
+Plug 'ThePrimeagen/refactoring.nvim'
 
 " Colorschemes
 Plug 'catppuccin/nvim'

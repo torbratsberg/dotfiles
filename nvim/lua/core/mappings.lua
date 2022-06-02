@@ -44,6 +44,7 @@ set('v', '<leader>y', '"+y')
 set('v', '*', 'y/<C-r>0<cr>')
 set('i', '{<cr>', '{<cr>}<esc>O')
 set('t', '<leader><esc>', '<C-\\><C-n>')
+set("v", "<leader>re", function() require('refactoring').select_refactor() end)
 
 -- Looking up stuff commands
 set('n', '<leader>f', function() require('telescope.builtin').find_files(require('telescope.themes').get_ivy({})) end)

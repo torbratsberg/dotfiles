@@ -1,7 +1,7 @@
--- Initiate Comment
 require('Comment').setup()
 
--- Initiate harpoon
+require('refactoring').setup({})
+
 require("harpoon").setup({
     global_settings = {
         save_on_toggle = false,
@@ -10,7 +10,6 @@ require("harpoon").setup({
     },
 })
 
--- Initiate Treesitter
 require'nvim-treesitter.configs'.setup{
     highlight = {
         enable = true
@@ -20,7 +19,6 @@ require'nvim-treesitter.configs'.setup{
     }
 }
 
--- Telescope configs
 require('telescope').setup{
     defaults = {
         file_ignore_patterns = {'%.png', '%.otf', '%.jpg', '%.jpeg', '%.woff', '%.woff2', '%.ttf', '%.eot', '%.map', '%.po',},
@@ -34,7 +32,6 @@ require('telescope').setup{
     }
 }
 
--- Initiate lightspeed
 require('lightspeed').setup{
     jump_to_unique_chars = false,
     safe_labels = {},
