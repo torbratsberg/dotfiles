@@ -47,8 +47,8 @@ set('t', '<leader><esc>', '<C-\\><C-n>')
 set("v", "<leader>re", function() require('refactoring').select_refactor() end)
 
 -- Looking up stuff commands
-set('n', '<leader>f', function() require('telescope.builtin').find_files(require('telescope.themes').get_ivy({})) end)
-set('n', '<leader>b', function() require('telescope.builtin').buffers(require('telescope.themes').get_ivy({})) end)
+set('n', '<leader>f', function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({})) end)
+set('n', '<leader>b', function() require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({})) end)
 set('n', '<leader>nv', function() require('core.telescope').search_config() end)
 set('n', '<leader>nn', function() require('core.telescope').search_notes() end)
 
@@ -68,7 +68,7 @@ set('n', '<leader>ct', function() vim.diagnostic.setloclist() end)
 set('n', '<leader>ca', function() require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor({})) end)
 set('n', '<leader>cr', function() require('telescope.builtin').lsp_references(require('telescope.themes').get_cursor({})) end)
 set('n', '<leader>cd', function() require('telescope.builtin').lsp_definitions(require('telescope.themes').get_cursor({})) end)
-set('n', '<leader>cs', function() require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_ivy({})) end)
+set('n', '<leader>cs', function() require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_dropdown({})) end)
 set('i', '<C-n>', function() require'cmp'.select_next_item() end)
 set('i', '<C-p>', function() require'cmp'.select_prev_item() end)
 
