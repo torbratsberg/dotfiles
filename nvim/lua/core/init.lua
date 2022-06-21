@@ -32,11 +32,6 @@ require('telescope').setup{
     }
 }
 
-require('lightspeed').setup{
-    jump_to_unique_chars = false,
-    safe_labels = {},
-}
-
 -- Require local config files
 require('core.lsp')
 require('core.statusline')

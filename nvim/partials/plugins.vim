@@ -23,8 +23,8 @@ Plug 'tpope/vim-eunuch'
 Plug 'ThePrimeagen/harpoon'
 Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim'
-Plug 'ggandor/lightspeed.nvim'
 Plug 'ThePrimeagen/refactoring.nvim'
+Plug 'easymotion/vim-easymotion'
 
 " Colorschemes
 Plug 'catppuccin/nvim'

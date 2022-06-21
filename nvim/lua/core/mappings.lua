@@ -8,7 +8,7 @@ set('n', '<C-s>s', ':%s///g<left><left><left>')
 set('n', '<C-s>w', '*N:%s///g<left><left>')
 
 -- Git commands
-set('n', '<leader>gs', ':vertical G<cr>:vertical resize 70<cr>:set winfixwidth<cr>')
+set('n', '<leader>gs', ':vertical G<cr>')
 set('n', '<leader>gbl', ':Git blame<cr>')
 set('n', '<leader>gbr', ':Telescope git_branches<cr>')
 set('n', '<leader>gd', ':Gdiffsplit<cr>')
@@ -45,6 +45,7 @@ set('v', '*', 'y/<C-r>0<cr>')
 set('i', '{<cr>', '{<cr>}<esc>O')
 set('t', '<leader><esc>', '<C-\\><C-n>')
 set("v", "<leader>re", function() require('refactoring').select_refactor() end)
+set('n', '<leader>a', '<Plug>(easymotion-bd-f)')
 
 -- Looking up stuff commands
 set('n', '<leader>f', function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({})) end)
