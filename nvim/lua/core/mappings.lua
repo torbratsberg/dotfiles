@@ -53,14 +53,6 @@ set('n', '<leader>b', function() require('telescope.builtin').buffers(require('t
 set('n', '<leader>nv', function() require('core.telescope').search_config() end)
 set('n', '<leader>nn', function() require('core.telescope').search_notes() end)
 
--- Harpoon mappings
-set('n', '<leader>ha', function() require("harpoon.mark").add_file() end)
-set('n', '<leader>h1', function() require("harpoon.ui").nav_file(1) end)
-set('n', '<leader>h2', function() require("harpoon.ui").nav_file(2) end)
-set('n', '<leader>h3', function() require("harpoon.ui").nav_file(3) end)
-set('n', '<leader>h4', function() require("harpoon.ui").nav_file(4) end)
-set('n', '<leader>hm', function() require("harpoon.ui").toggle_quick_menu() end)
-
 -- LSP stuff
 set('n', '<leader>cn', function() vim.lsp.buf.rename() end)
 set('n', '<leader>cf', function() vim.lsp.buf.formatting() end)

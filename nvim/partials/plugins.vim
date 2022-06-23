@@ -20,7 +20,6 @@ Plug 'numToStr/Comment.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-eunuch'
-Plug 'ThePrimeagen/harpoon'
 Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'ThePrimeagen/refactoring.nvim'
