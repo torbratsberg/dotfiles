@@ -82,3 +82,18 @@ ls.add_snippets("go", {
         t({"", "}"}),
     }),
 })
+
+ls.add_snippets("cs", {
+    s("cl", { -- Console.WriteLine($1);
+        t("Console.WriteLine("),
+        i(1, "var"),
+        t(");"),
+        i(0),
+    }),
+    s("cl", { -- Console.WriteLine($1);
+        t("Console.WriteLine("),
+        i(1, "var"),
+        t(");"),
+        i(0),
+    }),
+})

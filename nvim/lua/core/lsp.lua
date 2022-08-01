@@ -32,6 +32,7 @@ local lsp_servers = {
     'intelephense', -- `npm install -g intelephense`
     'pyright',      -- `npm i -g pyright`
     'vuels',        -- `npm i -g vls`
+    'csharp_ls',    -- `dotnet tool install --global csharp-ls`
 }
 
 local lsp_config = require('lspconfig')
