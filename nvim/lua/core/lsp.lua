@@ -38,6 +38,8 @@ local lsp_servers = {
 local lsp_config = require('lspconfig')
 for _, lsp in pairs(lsp_servers) do
     lsp_config[lsp].setup {
-        capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+        capabilities = require('cmp_nvim_lsp').update_capabilities(
+            vim.lsp.protocol.make_client_capabilities()
+        )
     }
 end

@@ -1,6 +1,3 @@
-filetype plugin indent on
-autocmd FileType scss setl iskeyword+=@-@
-
 function! SelectIndent()
     if indent(line(".")) == 0
         exec "normal vap"
@@ -31,12 +28,3 @@ function! SelectIndentWithSpace()
         exec "normal j"
     endwhile
 endfun
-
-" JS Stuff
-command! NewReactComponent call NewReactComponentFunc()
-function! NewReactComponentFunc()
-    read ~/.config/nvim/templates/react-component.txt
-    exec '%s/<++>/' . expand('%:t:r') . '/ge'
-endfunction
-
-command! GetIP :!echo $(ipconfig getifaddr en0)<cr>

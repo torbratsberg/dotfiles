@@ -44,7 +44,6 @@ set('v', '<leader>y', '"+y')
 set('v', '*', 'y/<C-r>0<cr>')
 set('i', '{<cr>', '{<cr>}<esc>O')
 set('t', '<leader><esc>', '<C-\\><C-n>')
-set("v", "<leader>re", function() require('refactoring').select_refactor() end)
 set('n', '<leader>a', '<Plug>(easymotion-bd-f)')
 
 -- Looking up stuff commands

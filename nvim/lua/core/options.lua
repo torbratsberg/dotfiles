@@ -1,4 +1,3 @@
-
 local set = vim.opt
 
 set.colorcolumn = '80'
@@ -32,4 +31,4 @@ set.expandtab = true
 
 -- Misc settings
 vim.cmd('syntax on')
-vim.cmd('colorscheme catppuccin')
+vim.cmd('colorscheme OceanicNext')

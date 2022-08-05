@@ -1,7 +1,5 @@
 require('Comment').setup()
 
-require('refactoring').setup({})
-
 require'nvim-treesitter.configs'.setup{
     highlight = {
         enable = true
@@ -13,7 +11,18 @@ require'nvim-treesitter.configs'.setup{
 
 require('telescope').setup{
     defaults = {
-        file_ignore_patterns = {'%.png', '%.otf', '%.jpg', '%.jpeg', '%.woff', '%.woff2', '%.ttf', '%.eot', '%.map', '%.po',},
+        file_ignore_patterns = {
+            '%.png',
+            '%.otf',
+            '%.jpg',
+            '%.jpeg',
+            '%.woff',
+            '%.woff2',
+            '%.ttf',
+            '%.eot',
+            '%.map',
+            '%.po',
+        },
         file_sorter = require('telescope.sorters').get_fzy_sorter,
     },
     extensions = {
@@ -31,3 +40,4 @@ require('core.options')
 require('core.luasnip')
 require('core.mappings')
 require('core.autocmds')
+require('core.misc')

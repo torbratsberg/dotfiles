@@ -21,10 +21,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim'
-Plug 'ThePrimeagen/refactoring.nvim'
 Plug 'easymotion/vim-easymotion'
 
 " Colorschemes
-Plug 'catppuccin/nvim'
+Plug 'mhartington/oceanic-next'
 
 call plug#end()

@@ -17,7 +17,7 @@ end
 -- Section functions
 
 local function get_misc_info()
-    return "[%#Error#%M%R%W%#TBBG#]"
+    return "[%M%R%W]"
 end
 
 local function get_file_path()
@@ -37,7 +37,7 @@ local function get_file_path()
         dir = string.sub(dir, 1, 3)
         final_path = final_path .. dir .. "/"
     end
-    return "[%#Title#" .. final_path .. file_name .. "%#TBBG#]"
+    return "[" .. final_path .. file_name .. "]"
 end
 
 local function get_lsp_info()
@@ -49,27 +49,22 @@ local function get_lsp_info()
         return ""
     end
 
-    local err = '%#DiagnosticError#'
-    local warn = '%#DiagnosticWarn#'
-    local info = '%#DiagnosticInfo#'
-    local reset = '%#TBBG#'
-
     return string.format(
-        "[%sE:%d %sW:%d %sN:%d%s]",
-        err, e, warn, w, info, n, reset
+        "[E:%d W:%d N:%d]",
+        e, w, n
     )
 end
 
 local function get_cursor_position()
-    return "[%#Constant#%l:%c%#TBBG#]"
+    return "[%l:%c]"
 end
 
 local function get_file_format()
-    return "[%#Directory#%{&fileformat}%#TBBG#]"
+    return "[%{&fileformat}]"
 end
 
 local function get_git_info()
-    return "[%#GitSignsAdd#" .. vim.fn.FugitiveHead() .. "%#TBBG#]"
+    return "[" .. vim.fn.FugitiveHead() .. "]"
 end
 
 function Status_line_active()
@@ -82,6 +77,7 @@ function Status_line_active()
         get_cursor_position(), -- Cursor position
         get_file_format(),     -- File format
         get_git_info(),        -- Git info
+        "",                    -- For extra whitespace at the end
     }
 
     return table.concat(sections, " ")
@@ -93,7 +89,7 @@ function Status_line_inactive()
         "[%M]",                    -- Misc info
         "[%f]",                    -- Full filepath
         "%=",                      -- Move rest of sections to other side
-        "[%l:%c]",                 -- Cursor position
+        "[%l:%c] ",                 -- Cursor position
     }
 
     return table.concat(sections, " ")
