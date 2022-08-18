@@ -43,6 +43,7 @@ alias gs="git status"
 alias gl="git log --graph --stat --dirstat"
 alias gp="git push"
 alias gg="git pull"
+alias ga="git add ."
 
 alias py3="python3"
 
