@@ -45,6 +45,9 @@ set('v', '*', 'y/<C-r>0<cr>')
 set('i', '{<cr>', '{<cr>}<esc>O')
 set('t', '<leader><esc>', '<C-\\><C-n>')
 set('n', '<leader>a', '<Plug>(easymotion-bd-f)')
+set('n', '<C-c><C-c>', function()
+    print(loadstring("print(" .. vim.fn.getline(".") .. ")")())
+end)
 
 -- Looking up stuff commands
 set('n', '<leader>f', function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({})) end)
