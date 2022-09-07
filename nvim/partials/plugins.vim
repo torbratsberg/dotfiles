@@ -21,7 +21,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim'
-Plug 'easymotion/vim-easymotion'
+Plug 'phaazon/hop.nvim'
 
 " Colorschemes
 Plug 'mhartington/oceanic-next'

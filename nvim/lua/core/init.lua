@@ -1,5 +1,7 @@
 require('Comment').setup()
 
+require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+
 require'nvim-treesitter.configs'.setup{
     highlight = {
         enable = true
