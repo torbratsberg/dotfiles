@@ -33,6 +33,7 @@ local lsp_servers = {
     'pyright',      -- `npm i -g pyright`
     'vuels',        -- `npm i -g vls`
     'csharp_ls',    -- `dotnet tool install --global csharp-ls`
+    'angularls',    -- `npm i -g @angular/language-server`
 }
 
 local lsp_config = require('lspconfig')
