@@ -94,11 +94,3 @@ function Status_line_inactive()
 
     return table.concat(sections, " ")
 end
-
-vim.cmd [[
-augroup Inits
-    autocmd!
-    autocmd WinEnter,BufEnter * lua vim.wo.statusline = '%!v:lua.Status_line_active()'
-    autocmd WinLeave,BufLeave * lua vim.wo.statusline = '%!v:lua.Status_line_inactive()'
-augroup END
-]]

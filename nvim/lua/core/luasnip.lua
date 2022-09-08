@@ -90,10 +90,4 @@ ls.add_snippets("cs", {
         t(");"),
         i(0),
     }),
-    s("cl", { -- Console.WriteLine($1);
-        t("Console.WriteLine("),
-        i(1, "var"),
-        t(");"),
-        i(0),
-    }),
 })

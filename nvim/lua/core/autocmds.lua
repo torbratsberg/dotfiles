@@ -31,3 +31,17 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
         end
     end
 })
+
+vim.api.nvim_create_autocmd({"WinEnter", "BufEnter"}, {
+    pattern = {"*"},
+    callback = function()
+        vim.wo.statusline = Status_line_active()
+    end
+})
+
+vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
+    pattern = {"*"},
+    callback = function()
+        vim.wo.statusline = Status_line_inactive()
+    end
+})
