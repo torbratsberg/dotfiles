@@ -45,3 +45,11 @@ vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
         vim.wo.statusline = Status_line_inactive()
     end
 })
+
+vim.api.nvim_create_autocmd({"BufWritePost"}, {
+    pattern = {"plugins.lua"},
+    callback = function()
+        vim.cmd('source %')
+        vim.cmd('PackerCompile')
+    end
+})

@@ -85,11 +85,11 @@ end
 
 function Status_line_inactive()
     local sections = {
-        "%#TBBG#",                 -- Define color
-        "[%M]",                    -- Misc info
-        "[%f]",                    -- Full filepath
-        "%=",                      -- Move rest of sections to other side
-        "[%l:%c] ",                 -- Cursor position
+        "%#TBBG#",  -- Define color
+        "[%M]",     -- Misc info
+        "[%f]",     -- Full filepath
+        "%=",       -- Move rest of sections to other side
+        "[%l:%c] ", -- Cursor position
     }
 
     return table.concat(sections, " ")
