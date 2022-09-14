@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
         run = ':TSUpdate',
         config = function()
             require('nvim-treesitter.configs').setup({
+                ensure_installed = { 'javascript', 'lua', 'scss', 'vim', 'go' },
                 highlight = { enable = true },
                 indent = { enable = false, }
             })
