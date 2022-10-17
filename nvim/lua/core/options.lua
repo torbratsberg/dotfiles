@@ -32,7 +32,3 @@ set.expandtab = true
 -- Misc settings
 vim.cmd('syntax on')
 vim.cmd('colorscheme OceanicNext')
-vim.cmd('hi Normal guibg=NONE')
-vim.cmd('hi EndOfBuffer guibg=NONE')
-vim.cmd('hi LineNr guibg=NONE')
-vim.cmd('hi SignColumn guibg=NONE')
