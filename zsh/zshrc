@@ -7,7 +7,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Private rc file
 if [ -z "$HOME/.config/zsh/private-zshrc.sh" ]; then
-	source "$HOME/.config/zsh/private-zshrc.sh"
+    source "$HOME/.config/zsh/private-zshrc.sh"
 fi
 
 if [ -z "$HOME/.cargo/env" ]; then
@@ -22,14 +22,17 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bingo:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/bin:$PATH"
+export PATH="$PATH:/Users/torbratsberg/.dotnet/tools"
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
 export NOTES_DIR="$HOME/main/notes"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 TERM=xterm-256color
 
+# Misc `cd` commands
 alias m="cd $HOME/main"
 alias s="cd $HOME/sites"
 alias t="cd wp-content/themes/"
@@ -37,8 +40,12 @@ alias p="cd wp-content/plugins/"
 alias c="cd $HOME/code"
 alias co="cd $HOME/.config"
 
+# Misc git shortcuts
 alias gs="git status"
 alias gl="git log --graph --stat --dirstat"
+alias gp="git push"
+alias gg="git pull"
+alias ga="git add ."
 
 alias py3="python3"
 

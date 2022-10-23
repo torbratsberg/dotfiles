@@ -10,6 +10,7 @@ nvim/plugged/*
 nvim/.netrwhist
 nvim/notes/*
 nvim/pack/
+nvim/plugin/
 zsh/private-zshrc.sh
 .DS_Store
 gitor/
