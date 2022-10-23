@@ -10,7 +10,9 @@ if [ -z "$HOME/.config/zsh/private-zshrc.sh" ]; then
 	source "$HOME/.config/zsh/private-zshrc.sh"
 fi
 
-source $HOME/.cargo/env
+if [ -z "$HOME/.cargo/env" ]; then
+	source $HOME/.cargo/env
+fi
 
 # Exports
 export PATH=$PATH:/usr/local/go/bin
