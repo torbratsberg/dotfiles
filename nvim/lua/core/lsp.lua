@@ -29,7 +29,6 @@ local lsp_servers = {
     'gopls',        -- `go install golang.org/x/tools/gopls@latest`
     'cssls',        -- `npm i -g vscode-langservers-extracted`
     'jsonls',       -- `npm i -g vscode-langservers-extracted`
-    'intelephense', -- `npm install -g intelephense`
     'pyright',      -- `npm i -g pyright`
     'vuels',        -- `npm i -g vls`
     'csharp_ls',    -- `dotnet tool install --global csharp-ls`

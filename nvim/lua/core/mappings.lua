@@ -50,8 +50,8 @@ set('n', '<C-c><C-c>', function()
 end)
 
 -- Looking up stuff commands
-set('n', '<leader>f', function() require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({})) end)
-set('n', '<leader>b', function() require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({})) end)
+set('n', '<leader>f', function() require('telescope.builtin').find_files(require('telescope.themes').get_ivy({})) end)
+set('n', '<leader>b', function() require('telescope.builtin').buffers(require('telescope.themes').get_ivy({})) end)
 set('n', '<leader>nn', function() require('telescope.builtin').find_files({ prompt_title = 'Notes', cwd = '~/main/notes/' }) end)
 set('n', '<leader>nv', function() require('telescope.builtin').find_files({ prompt_title = 'Config files', cwd = '~/.config/' }) end)
 
