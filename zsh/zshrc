@@ -15,6 +15,7 @@ if [ -z "$HOME/.cargo/env" ]; then
 fi
 
 # Exports
+export GCM_CREDENTIAL_STORE=gpg
 export DOTNET_ROOT=$HOME/.dotnet
 export GOPATH=$HOME/go
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
