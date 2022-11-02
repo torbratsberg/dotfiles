@@ -15,30 +15,29 @@ if [ -z "$HOME/.cargo/env" ]; then
 fi
 
 # Exports
-export PATH=$PATH:/usr/local/go/bin
+export DOTNET_ROOT=$HOME/.dotnet
 export GOPATH=$HOME/go
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bingo:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/bin:$PATH"
-export PATH="$PATH:/Users/torbratsberg/.dotnet/tools"
+
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
 export NOTES_DIR="$HOME/main/notes"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 TERM=xterm-256color
 
 # Misc `cd` commands
 alias m="cd $HOME/main"
-alias s="cd $HOME/sites"
-alias t="cd wp-content/themes/"
-alias p="cd wp-content/plugins/"
 alias c="cd $HOME/code"
 alias co="cd $HOME/.config"
+alias cdd="cd /mnt/c/Users/TORBRA/"
 
 # Misc git shortcuts
 alias gs="git status"
@@ -47,17 +46,12 @@ alias gp="git push"
 alias gg="git pull"
 alias ga="git add ."
 
-alias py3="python3"
+alias py="python3"
 
 alias nuke="rm -rf"
 alias sshkey="cat $HOME/.ssh/id_rsa.pub | pbcopy"
-alias vhosts="nvim /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf"
-alias hosts="sudo nvim /private/etc/hosts"
-alias dev="bash $HOME/code/bash/dc-devkit/start.sh"
-alias devv="node /Users/torbratsberg/work/dc-devkit/bin/index.js"
 alias ip="ipconfig getifaddr en0"
 alias l="lsd -la --icon never"
-alias ungitplugins="find ./wp-content/plugins/ -type d -name ".git" -exec rm -rf "{}" \;"
 
 alias brofile="nvim $HOME/.config/zsh/zshrc"
 alias brodate="source $HOME/.config/zsh/zshrc"
@@ -65,9 +59,7 @@ alias brodate="source $HOME/.config/zsh/zshrc"
 alias tu="tmux -f $HOME/.config/tmux/tmux.conf"
 alias sch="scripthub"
 
-alias cds='__cds() { cd "$(fd -d 1 -t d | fzf)" && cd wp-content && cd "$(fd -d 2 -t d | fzf)"}; __cds '
 alias tur='tmux rename-window "$(basename ${PWD})"'
-
 
 alias gtc="~/go/bin/gitor_client"
 alias nv="nvim"
