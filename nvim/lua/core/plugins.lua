@@ -14,12 +14,7 @@ return require('packer').startup(function(use)
         'numToStr/Comment.nvim',
         config = function() require('Comment').setup() end
     }
-    use {
-        'phaazon/hop.nvim',
-        config = function()
-            require('hop').setup({ keys = 'fhdjskalgtyrueiwoqpvbcnxmxz' })
-        end
-    }
+    use { 'easymotion/vim-easymotion', }
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',

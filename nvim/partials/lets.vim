@@ -12,4 +12,6 @@ let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 let mapleader=" "
 let leader=" "
 
+let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm,'
+
 let g:user_emmet_leader_key='<C-l>'
