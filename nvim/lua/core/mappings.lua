@@ -46,7 +46,26 @@ set('i', '{<cr>', '{<cr>}<esc>O')
 set('t', '<leader><esc>', '<C-\\><C-n>')
 set('n', '<leader>a', '<Plug>(easymotion-bd-f)')
 set('n', '<C-c><C-c>', function()
-    print(loadstring("print(" .. vim.fn.getline(".") .. ")")())
+    print(loadstring('print(' .. vim.fn.getline('.') .. ')')())
+end)
+
+-- Keymap to open stuff other places
+set('n', '<leader>nj', function()
+    local browser = '!/mnt/c/Program\\ Files/BraveSoftware/Brave-Browser/Application/brave.exe'
+    local word = vim.fn.expand('<cword>')
+    local prompt = 'Which program do you want to open?\n'
+    local options = { 'Jira', }
+
+    for i, item in pairs(options) do
+        prompt = prompt .. i .. '. ' .. item .. '\n'
+    end
+    local choice = vim.fn.input(prompt)
+
+    -- Open Jira ticket
+    if choice == '1' then
+        vim.cmd(browser .. ' https://norconsultdigital.atlassian.net/browse/FDVIE-' .. word)
+    else
+    end
 end)
 
 -- Looking up stuff commands
