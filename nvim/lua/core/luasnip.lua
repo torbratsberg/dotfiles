@@ -38,6 +38,15 @@ ls.add_snippets("scss", {
     }),
 })
 
+ls.add_snippets("typescript", {
+    s("cl", { -- console.log($1);
+        t("console.log("),
+        i(1, "var"),
+        t(");"),
+        i(0),
+    }),
+})
+
 ls.add_snippets("javascript", {
     s("cl", { -- console.log($1);
         t("console.log("),
