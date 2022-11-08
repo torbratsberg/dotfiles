@@ -54,7 +54,7 @@ set('n', '<leader>nj', function()
     local browser = '!/mnt/c/Program\\ Files/BraveSoftware/Brave-Browser/Application/brave.exe'
     local word = vim.fn.expand('<cword>')
     local prompt = 'Which program do you want to open?\n'
-    local options = { 'Jira', }
+    local options = { 'Jira', 'GitHub' }
 
     for i, item in pairs(options) do
         prompt = prompt .. i .. '. ' .. item .. '\n'
@@ -63,8 +63,13 @@ set('n', '<leader>nj', function()
 
     -- Open Jira ticket
     if choice == '1' then
-        vim.cmd(browser .. ' https://norconsultdigital.atlassian.net/browse/FDVIE-' .. word)
-    else
+        if word ~= '' then
+            vim.cmd(browser .. ' https://norconsultdigital.atlassian.net/browse/FDVIE-' .. word)
+        else
+            vim.cmd(browser .. ' https://norconsultdigital.atlassian.net/browse/')
+        end
+    elseif choice == '2' then
+        vim.cmd(browser .. ' https://github.com/' .. word)
     end
 end)
 
