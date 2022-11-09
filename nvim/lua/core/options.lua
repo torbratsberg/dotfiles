@@ -31,4 +31,4 @@ set.expandtab = true
 
 -- Misc settings
 vim.cmd('syntax on')
-vim.cmd('colorscheme OceanicNext')
+vim.cmd('colorscheme kanagawa')

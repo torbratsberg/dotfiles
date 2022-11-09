@@ -69,7 +69,7 @@ end
 
 function Status_line_active()
     local sections = {
-        "%#TBBG#",             -- Define color
+        "",
         get_misc_info(),	   -- Misc info
         get_file_path(),       -- The shortened filepath
         get_lsp_info(),        -- Count of error, warnings and hints
@@ -85,8 +85,7 @@ end
 
 function Status_line_inactive()
     local sections = {
-        "%#TBBG#",  -- Define color
-        "[%M]",     -- Misc info
+        " [%M]",     -- Misc info
         "[%f]",     -- Full filepath
         "%=",       -- Move rest of sections to other side
         "[%l:%c] ", -- Cursor position

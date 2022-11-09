@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
 
     -- Colorschemes
     use { 'mhartington/oceanic-next' }
+    use { 'rebelot/kanagawa.nvim' }
 
     -- Functionality
     use { 'tpope/vim-fugitive' }
