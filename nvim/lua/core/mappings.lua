@@ -61,14 +61,14 @@ set('n', '<leader>nj', function()
     end
     local choice = vim.fn.input(prompt)
 
-    if choice == '1' then
+    if choice == '1' or choice == 'jira' then
         -- Open Jira
         if word ~= '' then
             vim.cmd(browser .. ' https://norconsultdigital.atlassian.net/browse/FDVIE-' .. word)
         else
             vim.cmd(browser .. ' https://norconsultdigital.atlassian.net/browse/')
         end
-    elseif choice == '2' then
+    elseif choice == '2' or choice == 'gh' or choice == 'github' then
         -- Open GitHub
         vim.cmd(browser .. ' https://github.com/' .. word)
     end

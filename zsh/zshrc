@@ -43,16 +43,20 @@ alias cdd="cd /mnt/c/Users/TORBRA/"
 
 # Misc git shortcuts
 alias gs="git status"
-alias gl="git log --graph --stat --dirstat"
+alias gc="git checkout"
+alias gw="git switch"
+alias gl="git log"
+alias gd="git diff"
+alias gll="git log --graph --stat --dirstat"
 alias gp="git push"
 alias gg="git pull"
+alias gb="git branch"
 alias ga="git add ."
 
 alias py="python3"
 
 alias nuke="rm -rf"
 alias sshkey="cat $HOME/.ssh/id_rsa.pub | pbcopy"
-alias ip="ipconfig getifaddr en0"
 alias l="lsd -la --icon never"
 
 alias brofile="nvim $HOME/.config/zsh/zshrc"
