@@ -2,7 +2,6 @@ vim.cmd("filetype plugin indent on")
 vim.cmd("autocmd FileType scss setl iskeyword+=@-@")
 
 local command = vim.api.nvim_create_user_command
-command('GetIP', ':!echo $(ipconfig getifaddr en0)<cr>', {})
 command('NewReactComponent', ':lua NewReactComponent()<cr>', {})
 
 function NewReactComponent()

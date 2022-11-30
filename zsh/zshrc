@@ -5,11 +5,6 @@ ZSH_THEME="../../.config/zsh/torbratsberg"
 plugins=()
 source $ZSH/oh-my-zsh.sh
 
-# Private rc file
-if [ -z "$HOME/.config/zsh/private-zshrc.sh" ]; then
-    source "$HOME/.config/zsh/private-zshrc.sh"
-fi
-
 if [ -z "$HOME/.cargo/env" ]; then
 	source $HOME/.cargo/env
 fi
@@ -44,16 +39,13 @@ alias cdd="cd /mnt/c/Users/TORBRA/"
 # Misc git shortcuts
 alias gs="git status"
 alias gc="git checkout"
-alias gw="git switch"
 alias gl="git log"
 alias gd="git diff"
 alias gll="git log --graph --stat --dirstat"
 alias gp="git push"
 alias gg="git pull"
 alias gb="git branch"
-alias ga="git add ."
-
-alias py="python3"
+alias ga="git add"
 
 alias nuke="rm -rf"
 alias sshkey="cat $HOME/.ssh/id_rsa.pub | pbcopy"
@@ -63,13 +55,9 @@ alias brofile="nvim $HOME/.config/zsh/zshrc"
 alias brodate="source $HOME/.config/zsh/zshrc"
 
 alias tu="tmux -f $HOME/.config/tmux/tmux.conf"
-alias sch="scripthub"
-
 alias tur='tmux rename-window "$(basename ${PWD})"'
 
-alias gtc="~/go/bin/gitor_client"
-alias nv="nvim"
-
 alias portswho="lsof -i -P -n | grep LISTEN"
+alias fix_git_creds="gpgconf --kill gpg-agent && gpg-connect-agent reloadagent /bye"
 
 HISTFILE=~/.config/zsh/.zsh_history
