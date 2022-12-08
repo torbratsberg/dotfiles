@@ -11,11 +11,29 @@ return require('packer').startup(function(use)
     use { 'mattn/emmet-vim' }
     use { 'tpope/vim-surround' }
     use { 'iamcco/markdown-preview.nvim' }
+    use { 'easymotion/vim-easymotion', }
     use {
         'numToStr/Comment.nvim',
         config = function() require('Comment').setup() end
     }
-    use { 'easymotion/vim-easymotion', }
+    use {
+        'rest-nvim/rest.nvim',
+        requires = { "nvim-lua/plenary.nvim" },
+        config = function()
+            require("rest-nvim").setup({
+                skip_ssl_verification = true,
+                encode_url = true,
+                result = {
+                    formatters = {
+                        json = "jq",
+                        html = function(body)
+                            return vim.fn.system({"tidy", "-i", "-q", "-"}, body)
+                        end
+                    },
+                },
+            })
+        end
+    }
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
