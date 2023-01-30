@@ -51,6 +51,14 @@ set('n', '<C-c><C-c>', function()
     print(loadstring('print(' .. vim.fn.getline('.') .. ')')())
 end)
 
+-- Harpoon
+set('n', '<leader>ha', function() require("harpoon.mark").add_file() end)
+set('n', '<leader>hh', function() require("harpoon.ui").toggle_quick_menu() end)
+set('n', '<leader>h1', function() require("harpoon.ui").nav(1) end)
+set('n', '<leader>h2', function() require("harpoon.ui").nav(2) end)
+set('n', '<leader>h3', function() require("harpoon.ui").nav(3) end)
+set('n', '<leader>h4', function() require("harpoon.ui").nav(4) end)
+
 -- Keymap to open stuff other places
 set('n', '<leader>nj', function()
     local browser = '!/mnt/c/Program\\ Files/BraveSoftware/Brave-Browser/Application/brave.exe'

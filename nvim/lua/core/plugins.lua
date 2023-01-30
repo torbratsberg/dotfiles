@@ -13,6 +13,10 @@ return require('packer').startup(function(use)
     use { 'iamcco/markdown-preview.nvim' }
     use { 'easymotion/vim-easymotion', }
     use {
+        'ThePrimeagen/harpoon',
+        requires = { "nvim-lua/plenary.nvim" }
+    }
+    use {
         'numToStr/Comment.nvim',
         config = function() require('Comment').setup() end
     }
