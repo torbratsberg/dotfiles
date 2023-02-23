@@ -21,24 +21,6 @@ return require('packer').startup(function(use)
         config = function() require('Comment').setup() end
     }
     use {
-        'rest-nvim/rest.nvim',
-        requires = { "nvim-lua/plenary.nvim" },
-        config = function()
-            require("rest-nvim").setup({
-                skip_ssl_verification = true,
-                encode_url = true,
-                result = {
-                    formatters = {
-                        json = "jq",
-                        html = function(body)
-                            return vim.fn.system({"tidy", "-i", "-q", "-"}, body)
-                        end
-                    },
-                },
-            })
-        end
-    }
-    use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         config = function()
