@@ -46,6 +46,8 @@ set('i', '{<cr>', '{<cr>}<esc>O')
 set('t', '<leader><esc>', '<C-\\><C-n>')
 set('n', '<leader>a', '<Plug>(easymotion-bd-f)')
 set('n', '<A-v>', '<C-v>')
+set('n', '<leader>.', ':popup Main<cr>')
+set('n', '<leader>,', ':popup SwapApi<cr>')
 set('n', '<C-c><C-c>', function()
     print(loadstring('print(' .. vim.fn.getline('.') .. ')')())
 end)
@@ -59,31 +61,6 @@ set('n', '<leader>h3', function() require("harpoon.ui").nav_file(3) end)
 set('n', '<leader>h4', function() require("harpoon.ui").nav_file(4) end)
 set('n', '<leader>h5', function() require("harpoon.ui").nav_file(5) end)
 set('n', '<leader>h6', function() require("harpoon.ui").nav_file(6) end)
-
--- Keymap to open stuff other places
-set('n', '<leader>nj', function()
-    local browser = '!/mnt/c/Program\\ Files/BraveSoftware/Brave-Browser/Application/brave.exe'
-    local word = vim.fn.expand('<cword>')
-    local prompt = 'Which program do you want to open?\n'
-    local options = { 'Jira', 'GitHub' }
-
-    for i, item in pairs(options) do
-        prompt = prompt .. i .. '. ' .. item .. '\n'
-    end
-    local choice = vim.fn.input(prompt)
-
-    if choice == '1' or choice == 'jira' then
-        -- Open Jira
-        if word ~= '' then
-            vim.cmd(browser .. ' https://norconsultdigital.atlassian.net/browse/FDVIE-' .. word)
-        else
-            vim.cmd(browser .. ' https://norconsultdigital.atlassian.net/browse/')
-        end
-    elseif choice == '2' or choice == 'gh' or choice == 'github' then
-        -- Open GitHub
-        vim.cmd(browser .. ' https://github.com/' .. word)
-    end
-end)
 
 -- Looking up stuff commands
 set('n', '<leader>f', function() require('telescope.builtin').find_files(require('telescope.themes').get_ivy({})) end)
@@ -100,7 +77,7 @@ set('n', '<leader>ct', function() vim.diagnostic.setloclist() end)
 set('n', '<leader>ca', function() vim.lsp.buf.code_action() end)
 set('n', '<leader>cr', function() require('telescope.builtin').lsp_references(require('telescope.themes').get_cursor({})) end)
 set('n', '<leader>cd', function() require('telescope.builtin').lsp_definitions(require('telescope.themes').get_cursor({})) end)
-set('n', '<leader>cs', function() require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_dropdown({})) end)
+set('n', '<leader>cs', function() require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_ivy({})) end)
 set('i', '<C-n>', function() require'cmp'.select_next_item() end)
 set('i', '<C-p>', function() require'cmp'.select_prev_item() end)
 

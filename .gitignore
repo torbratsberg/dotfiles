@@ -17,3 +17,4 @@ gitor/
 tmux/plugins/
 StardewValley/
 bottom/
+nvim/lua/core/private.lua
