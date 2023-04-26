@@ -23,7 +23,7 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/bin:$PATH"
 
 export LANG=en_US.UTF-8
-export EDITOR='nvim'
+export EDITOR='vim'
 export NOTES_DIR="$HOME/main/notes"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -45,6 +45,9 @@ alias gll="git log --graph --stat --dirstat"
 alias gp="git push"
 alias gg="git pull"
 alias gb="git branch"
+alias gcb='git branch | fzf | xargs git checkout'
+alias gcbo='git branch --remotes | fzf | xargs git checkout -t'
+alias gbd='git branch | fzf | xargs git branch -D'
 alias ga="git add"
 
 alias nuke="rm -rf"
