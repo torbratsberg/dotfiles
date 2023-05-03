@@ -26,13 +26,13 @@ cmp.setup({
 -- Set up LSP servers
 local lsp_servers = {
     'tsserver',     -- `npm i -g typescript typescript-language-server`
-    'gopls',        -- `go install golang.org/x/tools/gopls@latest`
     'cssls',        -- `npm i -g vscode-langservers-extracted`
     'jsonls',       -- `npm i -g vscode-langservers-extracted`
-    'pyright',      -- `npm i -g pyright`
-    'vuels',        -- `npm i -g vls`
-    'csharp_ls',    -- `dotnet tool install --global csharp-ls`
     'angularls',    -- `npm i -g @angular/language-server`
+    -- 'pyright',      -- `npm i -g pyright`
+    -- 'vuels',        -- `npm i -g vls`
+    -- 'csharp_ls',    -- `dotnet tool install --global csharp-ls`
+    -- 'gopls',        -- `go install golang.org/x/tools/gopls@latest`
 }
 
 local lsp_config = require('lspconfig')

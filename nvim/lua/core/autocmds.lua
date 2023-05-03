@@ -1,8 +1,3 @@
-vim.api.nvim_create_autocmd({"BufWritePre"}, {
-    pattern = {"*.go"},
-    callback = function() vim.lsp.buf.formatting() end
-})
-
 vim.api.nvim_create_autocmd({"TextYankPost"}, {
     pattern = {"*"},
     callback = function() require'vim.highlight'.on_yank({timeout = 100}) end
@@ -26,6 +21,9 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
             if string.find(full_path, work_dir) then
                 vim.opt_local.shiftwidth = 2
                 vim.opt_local.tabstop = 2
+            else
+                vim.opt_local.shiftwidth = 4
+                vim.opt_local.tabstop = 4
             end
         end
     end

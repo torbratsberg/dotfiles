@@ -19,6 +19,10 @@ set('n', '<leader>gp', ':Git push<cr>')
 set('n', '<leader>g<left>', ':diffget //2<cr>')
 set('n', '<leader>g<right>', ':diffget //3<cr>')
 
+-- Tabbing
+set('n', '<leader>tn', ':tabnew<cr>')
+set('n', '<leader>tc', ':tabclose<cr>')
+
 -- Quickfix and local lists
 set('n', '<leader>j', ':cprev<cr>')
 set('n', '<leader>k', ':cnext<cr>')

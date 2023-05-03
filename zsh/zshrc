@@ -64,3 +64,7 @@ alias portswho="lsof -i -P -n | grep LISTEN"
 alias fix_git_creds="gpgconf --kill gpg-agent && gpg-connect-agent reloadagent /bye"
 
 HISTFILE=~/.config/zsh/.zsh_history
+
+if [ -z "$HOME/.config/zsh/private-zshrc.sh" ]; then
+	source "./private-zshrc.sh"
+fi

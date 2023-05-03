@@ -17,18 +17,17 @@ set.sidescrolloff = 20
 set.smartindent = true
 set.splitbelow = true
 set.splitright = true
-set.tabstop = 4
-set.shiftwidth = 4
-set.updatetime = 100
-set.signcolumn = "yes"
-set.list = false
-set.grepprg = "rg --vimgrep --hidden --ignore-file ~/.rg-gitignore"
-set.background = "dark"
-set.guifont = "Meslo:h15"
-set.guicursor = "a:blinkoff0-block"
+set.signcolumn = 'no'
+set.grepprg = 'rg --vimgrep --hidden --ignore-file ~/.rg-gitignore'
+set.guifont = 'Meslo:h15'
+set.guicursor = 'a:blinkoff0-block'
 set.termguicolors = true
 set.expandtab = true
+set.showtabline = 2
+set.cursorline = false
 
 -- Misc settings
 vim.cmd('syntax on')
-vim.cmd('colorscheme torte')
+vim.cmd('colorscheme kanagawa')
+vim.cmd('filetype plugin indent on')
+vim.cmd('autocmd FileType scss setl iskeyword+=@-@')

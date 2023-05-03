@@ -70,14 +70,14 @@ end
 function Status_line_active()
     local sections = {
         "",
-        get_misc_info(),	   -- Misc info
-        get_file_path(),       -- The shortened filepath
-        get_lsp_info(),        -- Count of error, warnings and hints
-        "%=",                  -- Move rest of sections to other side
-        get_cursor_position(), -- Cursor position
-        get_file_format(),     -- File format
-        get_git_info(),        -- Git info
-        "",                    -- For extra whitespace at the end
+        "%#Special#" .. get_misc_info(),
+        "%#Float#" .. get_file_path(),
+        "%#Constant#" .. get_lsp_info(),
+        "%=",
+        "%#Include#" .. get_cursor_position(),
+        "%#Special#" .. get_file_format(),
+        "%#string#" .. get_git_info(),
+        "",
     }
 
     return table.concat(sections, " ")

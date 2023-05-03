@@ -3,26 +3,30 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Colorschemes
-    use { 'mhartington/oceanic-next' }
     use { 'rebelot/kanagawa.nvim' }
 
     -- Functionality
     use { 'tpope/vim-fugitive' }
     use { 'mattn/emmet-vim' }
     use { 'tpope/vim-surround' }
-    use { 'iamcco/markdown-preview.nvim' }
     use { 'easymotion/vim-easymotion', }
     use {
         'ThePrimeagen/harpoon',
-        requires = { "nvim-lua/plenary.nvim" }
+        requires = { 'nvim-lua/plenary.nvim' }
     }
     use {
         'numToStr/Comment.nvim',
         config = function() require('Comment').setup() end
     }
     use {
+        "beauwilliams/focus.nvim",
+        config = function() require("focus").setup({
+            cursorline = false
+        }) end
+    }
+    use {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
+        -- run = ':TSUpdate',
         config = function()
             require('nvim-treesitter.configs').setup({
                 ensure_installed = { 'javascript', 'lua', 'scss', 'vim', 'go', 'sql', 'typescript' },
