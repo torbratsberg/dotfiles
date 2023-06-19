@@ -28,6 +28,6 @@ set.cursorline = false
 
 -- Misc settings
 vim.cmd('syntax on')
-vim.cmd('colorscheme kanagawa')
+vim.cmd('colorscheme gruvbox-material')
 vim.cmd('filetype plugin indent on')
 vim.cmd('autocmd FileType scss setl iskeyword+=@-@')

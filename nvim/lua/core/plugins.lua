@@ -4,12 +4,17 @@ return require('packer').startup(function(use)
 
     -- Colorschemes
     use { 'rebelot/kanagawa.nvim' }
+    use { 'sainnhe/gruvbox-material' }
 
     -- Functionality
     use { 'tpope/vim-fugitive' }
     use { 'mattn/emmet-vim' }
     use { 'tpope/vim-surround' }
     use { 'easymotion/vim-easymotion', }
+    use {
+        'stevearc/oil.nvim',
+        config = function() require('oil').setup() end
+    }
     use {
         'ThePrimeagen/harpoon',
         requires = { 'nvim-lua/plenary.nvim' }
