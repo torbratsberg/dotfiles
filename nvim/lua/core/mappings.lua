@@ -49,6 +49,7 @@ set('v', '*', 'y/<C-r>0<cr>')
 set('i', '{<cr>', '{<cr>}<esc>O')
 set('t', '<leader><esc>', '<C-\\><C-n>')
 set('n', '<leader>a', '<Plug>(easymotion-bd-f)')
+set('n', '<leader>q', '<Plug>(easymotion-bd-f2)')
 set('n', '<A-v>', '<C-v>')
 set('n', '<leader>.', '<cmd>popup Main<cr>')
 set('n', '<leader>,', '<cmd>popup SwapApi<cr>')
@@ -71,6 +72,7 @@ set('n', '<leader>f', function() require('telescope.builtin').find_files(require
 set('n', '<leader>r', function() require('telescope.builtin').resume(require('telescope.themes').get_ivy({})) end)
 set('n', '<leader>b', function() require('telescope.builtin').buffers(require('telescope.themes').get_ivy({})) end)
 set('n', '<leader>nn', function() require('telescope.builtin').find_files({ prompt_title = 'Notes', cwd = '~/main/notes/' }) end)
+set('n', '<leader>ns', function() require('telescope.builtin').find_files({ prompt_title = 'Slides', cwd = '~/main/slides/' }) end)
 set('n', '<leader>nv', function() require('telescope.builtin').find_files({ prompt_title = 'Config files', cwd = '~/.config/' }) end)
 
 -- LSP stuff

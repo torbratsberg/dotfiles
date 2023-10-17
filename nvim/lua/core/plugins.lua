@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
     -- Colorschemes
     use { 'rebelot/kanagawa.nvim' }
     use { 'sainnhe/gruvbox-material' }
+    use { 'tjdevries/templ.nvim' }
 
     -- Functionality
     use { 'tpope/vim-fugitive' }
@@ -25,9 +26,7 @@ return require('packer').startup(function(use)
     }
     use {
         "beauwilliams/focus.nvim",
-        config = function() require("focus").setup({
-            cursorline = false
-        }) end
+        config = function() require("focus").setup({ cursorline = false }) end
     }
     use {
         'nvim-treesitter/nvim-treesitter',

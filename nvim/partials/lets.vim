@@ -15,3 +15,5 @@ let leader=" "
 let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm,'
 
 let g:user_emmet_leader_key='<C-l>'
+
+let g:gruvbox_material_background = 'hard'

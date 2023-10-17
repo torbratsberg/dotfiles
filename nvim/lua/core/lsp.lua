@@ -32,7 +32,7 @@ local lsp_servers = {
     -- 'pyright',      -- `npm i -g pyright`
     -- 'vuels',        -- `npm i -g vls`
     -- 'csharp_ls',    -- `dotnet tool install --global csharp-ls`
-    -- 'gopls',        -- `go install golang.org/x/tools/gopls@latest`
+    'gopls',        -- `go install golang.org/x/tools/gopls@latest`
 }
 
 local lsp_config = require('lspconfig')
