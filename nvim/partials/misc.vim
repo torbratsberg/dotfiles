@@ -35,3 +35,5 @@ menu Main.OpenGithub :lua OpenWord('github')<cr>
 menu SwapApi.Development :lua SwapAPI('dev')<cr>
 menu SwapApi.Local :lua SwapAPI('local')<cr>
 menu SwapApi.BetaSQL :lua SwapAPI('betasql')<cr>
+
+autocmd ColorScheme * lua require('leap').init_highlight(true)

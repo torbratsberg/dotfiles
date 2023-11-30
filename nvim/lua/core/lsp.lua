@@ -29,10 +29,10 @@ local lsp_servers = {
     'cssls',        -- `npm i -g vscode-langservers-extracted`
     'jsonls',       -- `npm i -g vscode-langservers-extracted`
     'angularls',    -- `npm i -g @angular/language-server`
-    -- 'pyright',      -- `npm i -g pyright`
-    -- 'vuels',        -- `npm i -g vls`
-    -- 'csharp_ls',    -- `dotnet tool install --global csharp-ls`
+    'pyright',      -- `npm i -g pyright`
+    'csharp_ls',    -- `dotnet tool install --global csharp-ls`
     'gopls',        -- `go install golang.org/x/tools/gopls@latest`
+    'svelte'        -- `npm i svelte-language-server`
 }
 
 local lsp_config = require('lspconfig')

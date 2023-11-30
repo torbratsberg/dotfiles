@@ -14,9 +14,11 @@ export GCM_CREDENTIAL_STORE=gpg
 export GPG_TTY=$(tty)
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
+export DOTNET_ROOT=$HOME/.dotnet
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bingo:$PATH"
 export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
 export PATH="/usr/bin:$PATH"
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
@@ -64,5 +66,5 @@ alias fix_git_creds="gpgconf --kill gpg-agent && gpg-connect-agent reloadagent /
 HISTFILE=~/.config/zsh/.zsh_history
 
 if [ -z "$HOME/.config/zsh/private-zshrc.sh" ]; then
-	source "./private-zshrc.sh"
+	source "$HOME/.config/zsh/private-zshrc.sh"
 fi

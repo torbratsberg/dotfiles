@@ -5,13 +5,16 @@ return require('packer').startup(function(use)
     -- Colorschemes
     use { 'rebelot/kanagawa.nvim' }
     use { 'sainnhe/gruvbox-material' }
-    use { 'tjdevries/templ.nvim' }
 
     -- Functionality
     use { 'tpope/vim-fugitive' }
     use { 'mattn/emmet-vim' }
     use { 'tpope/vim-surround' }
     use { 'easymotion/vim-easymotion', }
+    use {
+        'ggandor/leap.nvim',
+        config = function() require('leap').add_default_mappings() end
+    }
     use {
         'stevearc/oil.nvim',
         config = function() require('oil').setup() end
@@ -33,7 +36,7 @@ return require('packer').startup(function(use)
         -- run = ':TSUpdate',
         config = function()
             require('nvim-treesitter.configs').setup({
-                ensure_installed = { 'javascript', 'lua', 'scss', 'vim', 'go', 'sql', 'typescript' },
+                ensure_installed = { 'javascript', 'lua', 'scss', 'vim', 'go', 'sql', 'typescript', 'html' },
                 highlight = { enable = true },
                 indent = { enable = false, }
             })

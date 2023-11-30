@@ -6,6 +6,15 @@ local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
 
+ls.add_snippets("svelte", {
+    s("cl", { -- console.log($1);
+        t("console.log("),
+        i(1, "var"),
+        t(");"),
+        i(0),
+    }),
+})
+
 ls.add_snippets("typescript", {
     s("cl", { -- console.log($1);
         t("console.log("),
