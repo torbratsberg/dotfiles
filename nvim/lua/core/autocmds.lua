@@ -29,20 +29,6 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
     end
 })
 
-vim.api.nvim_create_autocmd({"WinEnter", "BufEnter", "BufWritePost"}, {
-    pattern = {"*"},
-    callback = function()
-        vim.wo.statusline = Status_line_active()
-    end
-})
-
-vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
-    pattern = {"*"},
-    callback = function()
-        vim.wo.statusline = Status_line_inactive()
-    end
-})
-
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
     pattern = {"plugins.lua"},
     callback = function()

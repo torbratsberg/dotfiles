@@ -23,11 +23,14 @@ set.guifont = 'Meslo:h15'
 set.guicursor = 'a:blinkoff0-block'
 set.termguicolors = true
 set.expandtab = true
-set.showtabline = 2
+set.showtabline = 0
 set.cursorline = false
+set.foldmarker = "{,}"
+set.foldmethod = "marker"
+set.foldlevel = 99
 
 -- Misc settings
 vim.cmd('syntax on')
-vim.cmd('colorscheme kanagawa-dragon')
+vim.cmd('colorscheme kanagawa-wave')
 vim.cmd('filetype plugin indent on')
 vim.cmd('autocmd FileType scss setl iskeyword+=@-@')
