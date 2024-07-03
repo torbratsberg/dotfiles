@@ -35,6 +35,8 @@ alias m="cd $HOME/main"
 alias c="cd $HOME/code"
 alias co="cd $HOME/.config"
 alias cdd="cd /mnt/c/Users/TORBRA/"
+alias cie="cd ~/dev/ISYEiendomWeb/"
+alias cijt="cd ~/dev/ISYJobTechWeb/"
 
 # Misc git shortcuts
 alias gs="git status"
@@ -49,6 +51,7 @@ alias gcb='git branch | fzf | xargs git checkout'
 alias gcbo='git branch --remotes | fzf | xargs git checkout -t'
 alias gbd='git branch | fzf | xargs git branch -D'
 alias ga="git add"
+alias nuke_all_branches="git branch | grep -v '^\*' | xargs git branch -D"
 
 alias nuke="rm -rf"
 alias sshkey="cat $HOME/.ssh/id_rsa.pub | pbcopy"

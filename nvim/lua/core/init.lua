@@ -1,6 +1,7 @@
 require('core.plugins')
 require('core.options')
 require('core.lsp')
+require('core.statusline')
 require('core.luasnip')
 require('core.mappings')
 require('core.autocmds')
