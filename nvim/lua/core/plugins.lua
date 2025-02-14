@@ -2,10 +2,10 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    -- use 'github/copilot.vim'
+    use 'github/copilot.vim'
 
     -- Colorschemes
-    use { 'sainnhe/sonokai' }
+    use { 'morhetz/gruvbox' }
 
     -- Functionality
     use { 'tpope/vim-fugitive' }
@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
         -- run = ':TSUpdate',
         config = function()
             require('nvim-treesitter.configs').setup({
-                ensure_installed = { 'javascript', 'lua', 'scss', 'vim', 'go', 'sql', 'typescript', 'html' },
+                ensure_installed = { 'javascript', 'lua', 'scss', 'vim', 'sql', 'typescript', 'html' },
                 highlight = { enable = true },
                 indent = { enable = false, }
             })

@@ -25,7 +25,7 @@ cmp.setup({
 
 -- Set up LSP servers
 local lsp_servers = {
-    'tsserver',     -- `npm i -g typescript typescript-language-server`
+    'ts_ls',        -- `npm i -g typescript typescript-language-server`
     'cssls',        -- `npm i -g vscode-langservers-extracted`
     'jsonls',       -- `npm i -g vscode-langservers-extracted`
     'angularls',    -- `npm i -g @angular/language-server`

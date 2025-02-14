@@ -35,6 +35,7 @@ alias m="cd $HOME/main"
 alias c="cd $HOME/code"
 alias co="cd $HOME/.config"
 alias cdd="cd /mnt/c/Users/TORBRA/"
+alias cif="cd ~/dev/ISYFragment/"
 alias cie="cd ~/dev/ISYEiendomWeb/"
 alias cijt="cd ~/dev/ISYJobTechWeb/"
 
@@ -44,7 +45,7 @@ alias gc="git checkout"
 alias gl="git log"
 alias gd="git diff"
 alias gll="git log --graph --stat --dirstat"
-alias gp="git push"
+alias gp='git push origin "$(git branch --show-current)"'
 alias gg="git pull"
 alias gb="git branch"
 alias gcb='git branch | fzf | xargs git checkout'

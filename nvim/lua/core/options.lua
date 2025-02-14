@@ -34,9 +34,4 @@ vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
 vim.cmd('autocmd FileType scss setl iskeyword+=@-@')
 
-vim.cmd('colorscheme sonokai')
-
-vim.cmd('hi StatusLine guibg=#131018')
-vim.cmd('hi StatusLineNC guibg=#131018')
-vim.cmd('hi Normal guibg=#131018')
-vim.cmd('hi NormalNC guibg=#131018')
+vim.cmd('colorscheme gruvbox')
